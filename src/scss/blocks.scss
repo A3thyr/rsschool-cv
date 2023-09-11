@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body{ 
+    scroll-behavior: smooth;
+    width: 1440px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background: #0C0C0E;
+
+}
+.nav-cont-row-login{
+    margin-right: 20px;
+}
+.backimg1-grad {
+    top: 0;
+    width: 1440px;
+    height: 300px;
+}
