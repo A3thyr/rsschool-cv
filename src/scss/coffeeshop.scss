@@ -10,6 +10,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
         &-span{
             color: #0C0C0E;
             font-family: Forum;
@@ -39,10 +40,13 @@
         text-transform: capitalize;
     }
     &-menu{
+        width: 1400px;
         display: flex;
+        flex-flow: wrap;
         justify-content:space-between;
         align-items: center;
         &-cnt{
+
             display: inline-flex;
             flex-direction: column;
             justify-content: center;
@@ -64,8 +68,10 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+                width: 438px;
                 gap: 60px;
                 &-title{
+                    width: 196px;
                     color: #000;
                     font-family: Inter;
                     font-size: 20px;
