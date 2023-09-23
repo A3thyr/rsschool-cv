@@ -1,5 +1,7 @@
-.favorites {
-    margin-top: 40px;
+.favorites{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     &-title{
         display: flex;
         flex-direction: column;
@@ -23,7 +25,8 @@
         }
     }
     &-span{
-        margin-top: 40px;
+   
+        margin-left: 20px;
         color: #000;
         font-family: Inter;
         font-size: 20px;
@@ -32,9 +35,12 @@
         line-height: normal;
     }
     &-form{
-        margin-top: 40px;
+        display: flex;
+        margin-left: 20px;
+    
+        gap: 90px;
         &-radio{
-            gap: 90px;
+            
             color: #000;
             font-family: Inter;
             font-size: 20px;
@@ -44,10 +50,18 @@
         }
     }
     &-books{
-        
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
         &-book{
-
+            
             &-border{
+                padding: 15px 0 15px 20px;
+                width: 550px;
+                height: 555px;
+                flex-shrink: 0;
                 border: 1px solid #000;
                 background: #FFF;
                 &-title{
@@ -72,6 +86,7 @@
                 &-name{
                     display: flex;
                     flex-direction: column;
+                    margin-top: 20px;
                     &-bookname{
                         color: #000;
                         font-family: Inter;
@@ -94,6 +109,8 @@
                     }
                 }
                 &-desc{
+                    margin-top: 20px;
+                    width: 355px;
                     color: #000;
                     font-family: Inter;
                     font-size: 15px;
@@ -117,6 +134,14 @@
                     font-weight: 700;
                     line-height: normal;
                     letter-spacing: 1px;
+                    background-color: #FFF;
+                    transition: 0.4s;
+                    &:hover{
+                        transition: 0.4s;
+                        border-radius: 2px;
+                        border: 1px solid #BB945F;
+                        background: #BB945F;
+                    }
                     &-disabled{
                         width: 75px;
                         height: 30px;
@@ -133,7 +158,11 @@
                         letter-spacing: 1px;
                     }
                 }
+                img{
 
+                    position: absolute;
+
+                }
             }
         }
     }

@@ -1,13 +1,13 @@
 .cards {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    gap: 40px;
     &-title{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-left: 40px;
         gap: 20px;
         &-span{
             color: #000;
@@ -26,37 +26,172 @@
     }
     &-item{
         display: flex;
-        flex-flow: wrap;
+        flex-direction: row;
         justify-content:space-between;
         align-items: center;
         &-find{
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            &-title {
+                color: #000;
+                font-family: Inter;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.6px;
+            }
             &-border{
-
-                &-bg{
-
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 600px;
+                height: 386px;
+                flex-shrink: 0;
+                border: 3px solid #BB945F;
+                margin-top: 30px;
+                &-bg{   
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    width: 560px;
+                    height: 272px;
+                    flex-shrink: 0;
+                    background: #BB945F;
+                    gap: 20px;
                     &-title{
-
+                        margin-left: 20px;
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 50px; /* 166.667% */
+                        letter-spacing: 0.6px;
                     }
                     &-input{
-
+                        margin-left: 20px;
+                        width: 520px;
+                        height: 66px;
+                        flex-shrink: 0;
+                        border-radius: 10px;
+                        border: none;
+                        color: #000;
+                        font-size: 30px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 50px; /* 166.667% */
+                        letter-spacing: 0.6px;
+                        font-family: Forum;
+                        &::placeholder{
+                            padding-left: 20px;
+                            color: #8E8E8E;
+                            font-family: Forum;
+                            font-size: 30px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 50px; /* 166.667% */
+                            letter-spacing: 0.6px;
+                        }
+                        &::-webkit-outer-spin-button
+                        {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+                }
+                &-button{
+                    display: inline-flex;
+                    padding: 10px 40px;
+                    align-items: flex-end;
+                    margin-top: 20px;
+                    border-radius: 2px;
+                    border: 1px solid #0C0C0E;
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px; 
+                    background-color: #fff;
+                    transition: 0.4s;
+                    &:hover{
+                        transition: 0.4s;
+                        border-radius: 2px;
+                        border: 1px solid #BB945F;
+                        background: #BB945F;
                     }
                 }
             }
-            &-button{
-                    
-            }
+
         }
         &-getcard{
-
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 200px;
+            gap: 35px;
             &-title{
-
+                color: #000;
+                text-align: center;
+                font-family: Forum;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.6px;
             }
             &-span{
-
+                width: 456px;
+                color: #000;
+                text-align: right;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px; /* 200% */
+                letter-spacing: 0.4px;
             }
-            &-button{
-
+            &-buttons{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                &-button{
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 2px;
+                    border: 1px solid #0C0C0E;
+                    width: 75px;
+                    height: 30px;
+                    padding: 10px 0px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                    color: #0C0C0E;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 1px;
+                    background-color: #fff;
+                    transition: 0.4s;
+                    &:hover{
+                        transition: 0.4s;
+                        border-radius: 2px;
+                        border: 1px solid #BB945F;
+                        background: #BB945F;
+                    }
+                }
             }
         }
     }
