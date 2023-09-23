@@ -26,7 +26,7 @@
                             <li><a href="#favorties">Favorites</a></li>
                             <li><a href="#coffeeshop">Coffee shop</a></li>
                             <li><a href="#contacts">Contacts</a></li>
-                            <li><a href="#">Library Card</a></li>
+                            <li><a href="#cards">Library Card</a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
             <img src="./img/Carousel pagination.svg" alt="ping">
         </div>
     </section>
-    <section id="favorites" class="favorties">
+    <section id="favorites" class="favorites">
         <div class="favorites-title">
             <h2 class="favorites-title-span">Favorites</h2>
             <div class="favorites-title-line"></div>
@@ -95,8 +95,9 @@
                     <button class="favorites-books-book-border-button">
                         Buy
                     </button>
+                    <img src="./img/book.jpg" alt="book1">
                 </div>
-                <img src="./img/book.jpg" alt="book1">
+                
             </div>
             <div class="favorites-books-book">
                 <div class="favorites-books-book-border">
@@ -113,8 +114,9 @@
                     <button class="favorites-books-book-border-button">
                         Buy
                     </button>
+                    <img src="./img/book (1).jpg" alt="book2">
                 </div>
-                <img src="./img/book (1).jpg" alt="book2">
+                
             </div>
             <div class="favorites-books-book">
                 <div class="favorites-books-book-border">
@@ -131,8 +133,9 @@
                     <button class="favorites-books-book-border-button">
                         Buy
                     </button>
+                    <img src="./img/book (2).jpg" alt="book3">
                 </div>
-                <img src="./img/book (2).jpg" alt="book3">
+                
             </div>
             <div class="favorites-books-book">
                 <div class="favorites-books-book-border">
@@ -149,8 +152,9 @@
                     <button class="favorites-books-book-border-button-disabled">
                         Own
                     </button>
+                    <img src="./img/book (3).jpg" alt="book4">
                 </div>
-                <img src="./img/book (3).jpg" alt="book4">
+                
             </div>
         </div>
     </section>
@@ -253,29 +257,55 @@
             </div>
         </div>
     </section>
-    <section class="cards">
+    <section class="cards" id="cards">
         <div class="cards-title">
-            <h2 class="cards-title-span">Our Contacts</h2>
+            <h2 class="cards-title-span">Digital Library Cards</h2>
             <div class="cards-title-line"></div>
         </div>
         <div class="cards-item">
             <div class="cards-item-find">
+                <span class="cards-item-find-title">Find your Library card</span>
                 <div class="cards-item-find-border">
                     <div class="cards-item-find-border-bg">
-                        <span class="cards-item-find-border-bg-title"></span>
-                        <input type="text" class="cards-item-find-border-bg-input">
-                        <input type="number" class="cards-item-find-border-bg-input">
+                        <span class="cards-item-find-border-bg-title">Brooklyn Public Library</span>
+                        <input type="text" class="cards-item-find-border-bg-input" placeholder="Reader's name">
+                        <input type="number" class="cards-item-find-border-bg-input" placeholder="Card number">
                     </div>
-                </div>
-                <button class="cards-item-find-button"></button>
+                    <button class="cards-item-find-border-button">Check the card</button>
+                </div>  
             </div>
             <div class="cards-item-getcard">
                 <span class="cards-item-getcard-title">Get a reader card</span>
                 <p class="cards-item-getcard-span">You will be able to see a reader card after logging into account or you can register a new account</p>
-                <button class="cards-item-getcard-button">Sign Up</button>
-                <button class="cards-item-getcard-button">Log in</button>
+                <div class="cards-item-getcard-buttons">
+                    <button class="cards-item-getcard-buttons-button">Sign Up</button>
+                    <button class="cards-item-getcard-buttons-button">Log in</button>
+                </div>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer-address">
+            <p class="footer-address-textl">286 Cadman Plaza, New York, 
+                NY 11238, United States</p>
+            <p class="footer-address-time">Mon - Fri <br />
+                08:00 am - 07:00 pm</p>
+        </div>
+        <div class="footer-social">
+            <div class="footer-social-icons">
+                <img src="./img/u_twitter-alt.svg" alt="twitter">
+                <img src="./img/u_instagram.svg" alt="insta">
+                <img src="./img/u_facebook-f.svg" alt="facer">
+            </div>
+            <p class="footer-address-time">Sat - Sun <br />
+                10:00 am - 06:00 pm</p>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-rss">
+            <span class="footer-rss-item">2023</span>
+            <span class="footer-rss-item">The Rolling Scopes School</span>
+            <span class="footer-rss-item">A3thyr</span>
+        </div>
+    </footer>
 </body>
 </html>
