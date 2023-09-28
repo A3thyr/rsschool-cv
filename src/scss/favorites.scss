@@ -1,7 +1,7 @@
 .favorites{
     display: flex;
     flex-direction: column;
-    width: 1440px;
+
     gap: 40px;
     &-title{
         display: flex;
@@ -98,6 +98,8 @@
         flex-wrap: wrap;
         gap: 40px; 
         margin-right: 60px;
+     
+      
         &-border{
                 display: flex;
                 flex-direction: row;
@@ -108,6 +110,7 @@
                 flex-shrink: 0;
                 border: 1px solid #000;
                 background: #FFF;
+ 
                 &-book{
                     display: flex;
                     flex-direction: column;
