@@ -1,29 +1,10 @@
-@media screen and (max-width:768px){
-    .backimg1{
-        top: 0;
-        width: 768px;
-        pointer-events: none;
-        user-select: none;
-        & img{
-            width: 768px;
-            height: 500px;
-            object-fit: cover;
-        }
-    }
-}
 * {
     margin: 0;
     padding: 0;
 }   
 html, body{ 
     scroll-behavior: smooth;
-    max-width: 1440px;
-    @media screen and (min-width:1440px) {
-        max-width: 100%;
-    }
-    @media screen and (max-width:768px) {
-        max-width: 100%;
-    }
+    width: 1440px;
 }
 
 .header{
