@@ -1,6 +1,6 @@
 .contacts {
     display: flex;
-    width: 1440px;
+
     padding: 20px 20px 40px 20px;
     flex-direction: column;
     align-items: center;
@@ -27,7 +27,7 @@
         }
     }
     &-item{
-        width: 1400px;
+        width: 100%;
         display: flex;
         flex-flow: wrap;
         justify-content:space-between;
@@ -93,6 +93,113 @@
                     text-decoration: none;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .contacts {
+        display: flex;
+        padding: 20px 20px 40px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        &-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            &-span{
+                color: #000;
+                font-family: Forum;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px; /* 100% */
+                letter-spacing: 2px;
+            }
+            &-line{
+                width: 50px;
+                height: 1px;
+                background: #0C0C0E;
+            }
+        }
+        &-item{
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            flex-direction: column;
+            justify-content:space-between;
+            align-items: flex-start;
+            gap: 100px;
+            &-span{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                &-title{
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 40px; /* 200% */
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+                }
+                &-phoneinfo{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                    color: #000;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px; /* 200% */
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+                    &-tel{
+                        color: #000;
+                        text-align: center;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                    }
+                }
+                &-staff{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                    &-title{
+                        color: #000;
+                        text-align: center;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &-map{
+                & img{
+                    width: 100%;
+                    height: 414px;
+                }
+            }    
         }
     }
 }

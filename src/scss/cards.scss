@@ -27,6 +27,7 @@
     &-item{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content:space-between;
         align-items: center;
         &-find{
@@ -137,7 +138,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            margin-bottom: 200px;
+         
             gap: 35px;
             &-title{
                 color: #000;
