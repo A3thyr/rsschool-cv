@@ -1,9 +1,7 @@
 .coffeeshop {
     display: flex;
-
     padding: 20px 20px 40px 20px;
     flex-direction: column;
-    align-items: center;
     gap: 40px;
     &-title{
         display: flex;
@@ -40,14 +38,13 @@
         letter-spacing: 2px;
     }
     &-menu{
-        width: 1400px;
         display: flex;
-        flex-flow: wrap;
+        
         justify-content:space-between;
         align-items: center;
+        
         &-cnt{
-
-            display: inline-flex;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
@@ -100,7 +97,7 @@
             }
         }
         &-dnc{
-            display: inline-flex;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
@@ -147,6 +144,164 @@
                     line-height: 40px; /* 200% */
                     letter-spacing: 2px;
                     text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .coffeeshop {
+        display: flex;
+    
+        padding: 20px 20px 40px 20px;
+        flex-direction: column;
+
+        gap: 40px;
+        &-title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 20px;
+            &-span{
+                color: #0C0C0E;
+                font-family: Forum;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px; /* 100% */
+                letter-spacing: 2px;
+    
+            }
+            &-line{
+                width: 50px;
+                height: 1px;
+                background: #0C0C0E;
+    
+            }
+        }
+        &-span{
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px; /* 200% */
+            letter-spacing: 2px;
+        }
+        &-menu{
+    
+            display: flex;
+            flex-wrap:wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            &-cnt{
+
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 40px;
+                &-title{
+                    color: #BB945F;
+                    font-family: Forum;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px; /* 100% */
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+    
+                }
+                &-item{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 438px;
+                    gap: 60px;
+                    &-title{
+                        width: 205px;
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                    }
+                    &-line{
+                        width: 100px;
+                        height: 1px;
+                        background: #BB945F;
+    
+                    }
+                    &-price{
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            &-dnc{
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                gap: 40px;
+                &-title{
+                    color: #BB945F;
+                    font-family: Forum;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px; /* 100% */
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+    
+                }
+                &-item{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 60px;
+                    &-title{
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                    }
+                    &-line{
+                        width: 100px;
+                        height: 1px;
+                        background: #BB945F;
+    
+                    }
+                    &-price{
+                        color: #000;
+                        font-family: Forum;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px; /* 200% */
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                    }
                 }
             }
         }
