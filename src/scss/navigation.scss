@@ -114,3 +114,14 @@
         
     }
 }
+@media screen and (max-width:768px){
+    .nav{
+        &-cont{
+            &-row{
+                &-list{
+                    display: none;
+                }
+            }
+        }
+    }
+}
