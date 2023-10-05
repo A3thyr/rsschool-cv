@@ -10,118 +10,145 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        &-cont{
-            
-            &-row{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                &-title-span{
+        width: 100%;
+        &-title-span{
+            color: #FFF;
+            font-family: Forum;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; 
+            letter-spacing: 0.6px;
+        }
+        &-list{
+            &-buttons{
+                display: none;
+            }
+            ul{
+                display: inline-flex;
+                align-items: flex-start;
+                list-style:none;
 
+                gap: 30px;
+            }
+            li{
+                color: #FFF;
+                a{
+                    text-decoration: none;
                     color: #FFF;
-                    font-family: Forum;
-                    font-size: 30px;
+                    font-family: Inter;
+                    font-size: 20px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height: 50px; 
-                    letter-spacing: 0.6px;
+                    line-height: 50px;
                 }
-                &-list{
-                    ul{
-                        display: inline-flex;
-                        align-items: flex-start;
-                        list-style:none;
-                        margin-left: 454px;
-                        gap: 30px;
-                    }
-                    li{
-                        color: #FFF;
-                        a{
-                            text-decoration: none;
-                            color: #FFF;
-                            font-family: Inter;
-                            font-size: 20px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 50px;
-                        }
-                    }
-                }
-                &-logbtn{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    &-icon{
-                        margin-left: 40px;
-                    }
-                    &-burgerbtn {
-                        display: none;    
-                    }
-                }
-
             }
         }
+        &-logbtn{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &-icon{
+                margin-left: 40px;
+            }
+            &-burgerbtn {
+                display: none;    
+            }
+        }    
     }
 }
 @media screen and (max-width:768px){
     .header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        
         &-nav{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            &-cont{
+            width: 100%;
+            
+            &-list{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: -332px;
+                top: 0;
+                width: 332px;
+                height: 570px;
+                background-color: #000;
+                transition: all 0.4s;
+                
+                &.active{
+                    right: 0;
+
+                }
+                &-buttons {
+                    display: flex;
+                    gap: 40px;
+                    width: 100%;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin-right: 20px;
+                    position: absolute;
+                    top: 0;
+                    margin-top: 31px;
+                    &-exit{
+                        border: none;
+                        background-color:#000;
+                    }
+                }  
+                ul{
+                    display: inline-flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                }
+                li{
+                    a{
+                        color: #FFF;
+                        font-family: Inter;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 50px; /* 250% */
+                    }
+                }
+            }
+            &-logbtn{
                 display: flex;
                 flex-direction: row;
-                align-items: center;
                 justify-content: space-between;
-                &-row{
+                align-items: center;
+                gap: 40px;
+                &-burgerbtn {
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
+                    flex-direction: column;
                     justify-content: space-between;
-                    &-list{
-                        display: none;
-                    }
-                    &-logbtn{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-                        &-burgerbtn {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                            width: 45px;
-                            height: 20px;
-                            flex-shrink: 0;
-                            border: none;
-                            background-color: inherit;
-                            &-line{
-                                width: 45px;
-                                height: 2px;
-                                background-color: #fff;
-                            }
-                        }
-                        &-icon{
-                            
-                        }
+                    width: 45px;
+                    height: 20px;
+                    flex-shrink: 0;
+                    border: none;
+                    background-color: inherit;
+                    
+                    &-line{
+                        width: 45px;
+                        height: 2px;
+                        background-color: #fff;
                     }
                 }
-            }
-        }
-        
-    }
-}
-@media screen and (max-width:768px){
-    .nav{
-        &-cont{
-            &-row{
-                &-list{
-                    display: none;
-                }
+                &-icon{
+                    margin-top: 4px;           
+                }  
             }
         }
     }
-}
+    
+}      
+    
+
