@@ -75,17 +75,16 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                position: absolute;
-                right: -332px;
+                position: fixed;
                 top: 0;
+                right: -100%;
+                
                 width: 332px;
                 height: 570px;
                 background-color: #000;
                 transition: all 0.4s;
-                
                 &.active{
                     right: 0;
-
                 }
                 &-buttons {
                     display: flex;
@@ -150,5 +149,4 @@
     }
     
 }      
-    
 
