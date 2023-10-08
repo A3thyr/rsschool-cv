@@ -21,6 +21,8 @@
             letter-spacing: 0.6px;
         }
         &-list{
+            display: flex;
+            margin-left: 456px;
             &-buttons{
                 display: none;
             }
@@ -78,7 +80,7 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                
+                margin-left: 0px;
                 width: 332px;
                 height: 570px;
                 background-color: #000;
