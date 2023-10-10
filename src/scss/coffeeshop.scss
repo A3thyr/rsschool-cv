@@ -155,7 +155,6 @@
     
         padding: 20px 20px 40px 20px;
         flex-direction: column;
-
         gap: 40px;
         &-title{
             display: flex;
@@ -192,12 +191,10 @@
             letter-spacing: 2px;
         }
         &-menu{
-    
             display: flex;
-            flex-wrap:wrap;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             gap: 40px;
             &-cnt{
 
@@ -258,6 +255,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-end;
+                width: 100%;
                 gap: 40px;
                 &-title{
                     color: #BB945F;

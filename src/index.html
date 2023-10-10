@@ -15,36 +15,41 @@
 <body>
     <header class="header">
         <nav class="header-nav">
-            <div class="header-nav-cont">
-                <div class="header-nav-cont-row">
-                    <div class="header-nav-cont-row-title">
-                        <h1 class="header-nav-cont-row-title-span">Brooklyn Public Library</h1>
-                    </div>
-                    <div class="header-nav-cont-row-list">
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#favorties">Favorites</a></li>
-                            <li><a href="#coffeeshop">Coffee shop</a></li>
-                            <li><a href="#contacts">Contacts</a></li>
-                            <li><a href="#cards">Library Card</a></li>
-                        </ul>
-                    </div>
-                    <div class="header-nav-cont-row-logbtn">
-                        <div class="header-nav-cont-row-logbtn-icon">
-                            <img src="./img/icon_profile.svg" alt="icon">
-                        </div>
-                        <button class="header-nav-cont-row-logbtn-burgerbtn">
-                            <div class="header-nav-cont-row-logbtn-burgerbtn-line"></div>
-                            <div class="header-nav-cont-row-logbtn-burgerbtn-line"></div>
-                            <div class="header-nav-cont-row-logbtn-burgerbtn-line"></div>
-                        </button>
-                    </div>
+            <div class="header-nav-title">
+                <h1 class="header-nav-title-span">Brooklyn Public Library</h1>
+            </div>
+            <div class="header-nav-list">
+                <div class="header-nav-list-buttons">
+                    <img src="./img/icon_profile.svg" alt="icon">
+                    <button class="header-nav-list-buttons-exit">
+                        <img src="./img/burger.svg" alt="x">
+                    </button>
                 </div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#favorties">Favorites</a></li>
+                    <li><a href="#coffeeshop">Coffee shop</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#cards">Library Card</a></li>
+                </ul>
+            </div>
+            <div class="header-nav-logbtn">
+                <div class="header-nav-logbtn-icon">
+                    <img src="./img/icon_profile.svg" alt="icon">
+                </div>
+                <button class="header-nav-logbtn-burgerbtn" id="burger">
+                    <div class="header-nav-logbtn-burgerbtn-line"></div>
+                    <div class="header-nav-logbtn-burgerbtn-line"></div>
+                    <div class="header-nav-logbtn-burgerbtn-line"></div>
+                </button>
             </div>
         </nav>
     </header>
     <div class="backimg1">
         <img src="./img/Welcome.jpg">
+    </div>
+    <div class="backimg2">
+        <img src="./img/Welcome (1).jpg">
     </div>
     <section id="about" class="about">
         <div class="about-title">
@@ -53,17 +58,25 @@
         </div>
         <span class="about-span">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </span>
         <div class="about-img">
-            <div class="about-img-arrowleft"><img src="./img/Carret_Left.svg" alt="arrowleft"></div>
-            <div class="about-img-img1"><img src="./img/image 1.jpg" alt="img1"></div>
-            <div class="about-img-img2"><img src="./img/image 2.jpg" alt="img2"></div>
-            <div class="about-img-img3"><img src="./img/image 3.jpg" alt="img3"></div>
-            <div class="about-img-arrowright"><img src="./img/Carret_Right.svg" alt="arrowright"></div>
+            <button id="left" class="about-img-arrowleft"><img src="./img/Carret_Left.svg" alt="arrowleft"></button>
+            <div class="about-img-items">
+                <div class="about-img-items-img1"><img src="./img/image 1.jpg" alt="img1"></div>
+                <div class="about-img-items-img1"><img src="./img/image 2.jpg" alt="img2"></div>
+                <div class="about-img-items-img1"><img src="./img/image 3.jpg" alt="img3"></div>
+                <div class="about-img-items-img1"><img src="./img/image 3 (1).jpg" alt="img4"></div>
+                <div class="about-img-items-img1"><img src="./img/image 3 (2).jpg" alt="img5"></div>
+            </div>
+            <button id="right" class="about-img-arrowright"><img src="./img/Carret_Right.svg" alt="arrowright"></button>
         </div>
         <div class="about-ping">
-            <img src="./img/Carousel pagination.svg" alt="ping">
+            <ul class="about-ping-ul">
+                <li class="about-ping-ul-button"></li>
+                <li class="about-ping-ul-button"></li>
+                <li class="about-ping-ul-button"></li>
+            </ul>
         </div>
         <div class="about-pingtablet">
-            <img src="./img/Carousel pagination(1).svg" alt="ping">
+
         </div>
     </section>
     <section id="favorites" class="favorites">
