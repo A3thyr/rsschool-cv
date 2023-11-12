@@ -1,5 +1,14 @@
 import './styles.scss'
 
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+
+
+
 const menu = document.querySelector(".header-nav-list")
 const menuBtn = document.querySelector(".header-nav-logbtn-burgerbtn")
 const menuBtnClose = document.querySelector(".header-nav-list-buttons-exit")
@@ -24,29 +33,58 @@ if (menu && menuBtn && menuBtnClose){
 
 // < ========================================================== >
 
-const carousel = document.querySelector('.about-img');
-const carouselBtn = document.querySelectorAll('.about-ping-ul-button');
-const carouselItem = document.querySelectorAll('.about-img-img1');
-const prev = document.querySelector('.about-img-arrowleft')
-const next = document.querySelector('.about-img-arrowright')
+// init Swiper:
+const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    modules: [Navigation, Pagination],
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
 
-let active = 0;
-let lengthItem = carousel.length - 1;
 
-next.onclick = function(){
-    if(active + 1 > lengthItem) {
-        active = 0;
-    } else{
-        active = active + 1;
-    }
-    reloadSlider();
-}
+// < ========================================================== >
 
-function reloadSlider (){
-    let leftCheck = items[active].offsetLeft
-    list.style.left = -leftCheck + 'px'
 
-    let lastActiveBtn = document.querySelector('.about-ping-ul-button .active');
-    lastActiveBtn.classList.remove('active');
-    carouselBtn.classList.add('active');
-}
+//favorites
+const seasonBtn = document.querySelectorAll('input[name=level]')
+const card = document.querySelectorAll(".favorites-books")
+const cardW = document.getElementById('winter')
+const cardS = document.getElementById('spring')
+const cardSu = document.getElementById('summer')
+const cardA = document.getElementById('autumn')
+const seasonBtnWinter = document.getElementById("winterb")
+const seasonBtnSpring = document.getElementById("springb")
+const seasonBtnSummer = document.getElementById("summerb")
+const seasonBtnAutumn = document.getElementById("autumnb")
+
+seasonBtnWinter.addEventListener('click', () =>{
+    cardW.classList.add('active')
+    cardS.classList.remove('active')
+    cardSu.classList.remove('active')
+    cardA.classList.remove('active')
+});
+seasonBtnSpring.addEventListener('click', () =>{
+    cardS.classList.add('active')
+    cardW.classList.remove('active')
+    cardSu.classList.remove('active')
+    cardA.classList.remove('active')
+});
+seasonBtnSummer.addEventListener('click', () =>{
+    cardSu.classList.add('active')
+    cardW.classList.remove('active')
+    cardS.classList.remove('active')
+    cardA.classList.remove('active')
+});
+seasonBtnAutumn.addEventListener('click', () =>{
+    cardA.classList.add('active')
+    cardS.classList.remove('active')
+    cardSu.classList.remove('active')
+    cardW.classList.remove('active')
+});

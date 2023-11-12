@@ -36,62 +36,21 @@
         line-height: 40px; /* 200% */
         color: #000;
     }
-    &-img{
-        margin-top: 20px;
-        
-        display: inline-flex;
-        gap: 25px;
-        overflow: hidden;
-        align-items: center;
-        &-arrowleft{
-            display: flex;
-            width: 24px;
-            height: 24px;
-            border: none; 
-            background-color: inherit;
-        }
-        &-arrowright{
-            display: flex;
-            width: 24px;
-            height: 24px;
-            border: none; 
-            background-color: inherit;
-        }
-        &-img4{
-            display: none;
-        }
-        &-img5{
-            display: none;
-        }
-    }
-    &-ping{
+    & .swiper{
 
-        &-ul{
-            display: flex;
-            margin-top: 40px;
-            gap: 10px;
-            &-button{
-                list-style-type: none;
-                width: 16px;
-                height: 16px;
-                background-color: #0C0C0E;
-                border: none;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: all 0.3s;
-                &:hover{
-                    opacity: 0.7;
-                    background-color: #BB945F;
-                }
-                &.active{
-                    background-color: #BB945F;
-                }
+        width: 100%;
+        height: 100%;   
+        & .swiper-slide{
+
+            & img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
-    &-pingtablet{
-        display: none;
-    }
+
 }
 @media screen and (max-width:768px) {
     .about {
@@ -132,31 +91,6 @@
             line-height: 40px; /* 200% */
             color: #000;
         }
-        &-img{
-            margin-top: 20px;
-            display: flex;
-            flex-direction: row;
-            gap: 58px;
-            justify-content: space-between;
-            &-img2{
-                display: none;
-            }
-            &-img3{
-                display: none;
-            }
-            &-arrowleft{
-                display: flex;
-            }
-            &-arrowright{
-                display: flex;
-            }
-        }
-        &-ping{
-            display: none;
-        }
-        &-pingtablet{
-            display: flex;
-            margin-top: 25px;
-        }
+
     }
 }
