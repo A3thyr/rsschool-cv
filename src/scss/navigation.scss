@@ -53,6 +53,14 @@
             &-icon{
                 margin-left: 40px;
             }
+            &-menu{
+                display: flex;
+                flex-direction: column;
+                &.active{
+                    
+                    
+                }
+            }
             &-burgerbtn {
                 display: none;    
             }

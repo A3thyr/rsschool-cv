@@ -53,8 +53,6 @@ const swiper = new Swiper(".swiper", {
 
 
 //favorites
-const seasonBtn = document.querySelectorAll('input[name=level]')
-const card = document.querySelectorAll(".favorites-books")
 const cardW = document.getElementById('winter')
 const cardS = document.getElementById('spring')
 const cardSu = document.getElementById('summer')
@@ -88,3 +86,11 @@ seasonBtnAutumn.addEventListener('click', () =>{
     cardSu.classList.remove('active')
     cardW.classList.remove('active')
 });
+
+
+
+// < ========================================================== >
+
+
+// iconmenu
+
