@@ -52,6 +52,22 @@
             justify-content: space-between;
             &-icon{
                 margin-left: 40px;
+                &-btn{
+                    height: 29px;
+                    background-color: inherit;
+                    border: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            &-menu{
+                display: none;
+                &.active{
+                    
+                    display: flex;
+                flex-direction: column;
+                }
             }
             &-burgerbtn {
                 display: none;    

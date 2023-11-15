@@ -3,9 +3,9 @@ import './styles.scss'
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 
 
 
@@ -34,16 +34,63 @@ if (menu && menuBtn && menuBtnClose){
 // < ========================================================== >
 
 // init Swiper:
-const swiper = new Swiper(".about-img-items", {
+const swiper = new Swiper(".swiper", {
     slidesPerView: 3,
     spaceBetween: 25,
     modules: [Navigation, Pagination],
     pagination: {
-      el: ".about-ping-ul",
+      el: ".swiper-pagination",
       clickable: true
     },
     navigation: {
-      nextEl: ".about-img-arrowright",
-      prevEl: ".about-img-arrowleft"
-    }
-  });
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+
+// < ========================================================== >
+
+
+//favorites
+const cardW = document.getElementById('winter')
+const cardS = document.getElementById('spring')
+const cardSu = document.getElementById('summer')
+const cardA = document.getElementById('autumn')
+const seasonBtnWinter = document.getElementById("winterb")
+const seasonBtnSpring = document.getElementById("springb")
+const seasonBtnSummer = document.getElementById("summerb")
+const seasonBtnAutumn = document.getElementById("autumnb")
+
+seasonBtnWinter.addEventListener('click', () =>{
+    cardW.classList.add('active')
+    cardS.classList.remove('active')
+    cardSu.classList.remove('active')
+    cardA.classList.remove('active')
+});
+seasonBtnSpring.addEventListener('click', () =>{
+    cardS.classList.add('active')
+    cardW.classList.remove('active')
+    cardSu.classList.remove('active')
+    cardA.classList.remove('active')
+});
+seasonBtnSummer.addEventListener('click', () =>{
+    cardSu.classList.add('active')
+    cardW.classList.remove('active')
+    cardS.classList.remove('active')
+    cardA.classList.remove('active')
+});
+seasonBtnAutumn.addEventListener('click', () =>{
+    cardA.classList.add('active')
+    cardS.classList.remove('active')
+    cardSu.classList.remove('active')
+    cardW.classList.remove('active')
+});
+
+
+
+// < ========================================================== >
+
+
+// iconmenu
+
