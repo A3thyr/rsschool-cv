@@ -69,6 +69,14 @@
                 flex-direction: column;
                 }
             }
+            &-menu{
+                display: flex;
+                flex-direction: column;
+                &.active{
+                    
+                    
+                }
+            }
             &-burgerbtn {
                 display: none;    
             }
