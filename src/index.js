@@ -94,3 +94,44 @@ seasonBtnAutumn.addEventListener('click', () =>{
 
 // iconmenu
 
+const iconBtn = document.querySelector('.header-nav-logbtn-icon-btn')
+const iconMenu = document.querySelector('.header-nav-logbtn-menu')
+
+
+iconBtn.addEventListener('click', () => {
+    iconMenu.classList.toggle('active')
+});
+
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.header-nav-logbtn-icon-btn') && iconMenu.classList.contains('active')){
+        iconMenu.classList.remove('active')
+    }
+});
+// < ========================================================== >
+
+
+//pop up
+
+const regBtn = document.getElementById('register')
+const regMenu = document.querySelector('.header-nav-logbtn-regmodal')
+const regClsBtn = document.querySelector('.header-nav-logbtn-regmodal-clsbtn')
+
+const loginBtn = document.getElementById('login')
+const loginMenu = document.querySelector('.header-nav-logbtn-logmodal')
+const loginClsBtn = document.querySelector('.header-nav-logbtn-logmodal-clsbtn')
+
+regBtn.addEventListener('click', () => {
+    regMenu.classList.toggle('active')
+});
+
+regClsBtn.addEventListener('click', () => {
+    regMenu.classList.remove('active')
+});
+
+loginBtn.addEventListener('click', () => {
+    loginMenu.classList.toggle('active')
+});
+
+loginClsBtn.addEventListener('click', () => {
+    loginMenu.classList.remove('active')
+});
