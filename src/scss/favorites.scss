@@ -41,7 +41,29 @@
         gap: 90px;
         &-radio{
             display: flex;
-        
+            justify-content: center;
+            align-items: center;
+            &-button{
+                display: grid;
+                place-content: center;
+                appearance: none;
+                font: inherit;
+                color: #000;
+                width: 1em;
+                height: 1em;
+                border: 0.15em solid #000;
+                border-radius: 50%;
+                &:checked{
+                    &:before{
+                        content: '';
+                        width: 0.5em;
+                        height: 0.5em;
+                        border-radius: 50%;
+                        box-shadow: inset 1em 1em #000;
+                        background-color: #000;
+                    }
+                } 
+            }
             & .season{
                 display: flex;
                 align-items: center;
@@ -174,7 +196,7 @@
                             border: 1px solid #BB945F;
                             background: #BB945F;
                         }
-                        &-disabled{
+                        &.disabled{
                             width: 75px;
                             height: 30px;
                             flex-shrink: 0;

@@ -60,6 +60,28 @@
                     &:hover{
                         cursor: pointer;
                     }
+                    &.inactive{
+                        display: none;
+                    }
+                }
+                &-namedbtn{
+                    display: none;
+                    width: 28px;
+                    height: 28px;
+                    border: transparent;
+                    border-radius: 50%;
+                    color: #BB945F;
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 133.333% */
+                    &.active{
+                        display: block;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
             &-menu{
@@ -99,6 +121,14 @@
                     flex-direction: column;
                     gap: 10px;
                     margin-top: 15px;
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    &.active{
+                        opacity: 1;
+                        visibility: visible;
+                        position: relative;
+                    }
                     &-btn{
                         cursor: pointer;
                         border: none;
@@ -113,9 +143,16 @@
                     }
                 }
                 &-reg{
-                    display: none;
+                    display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    margin-top: 15px;
+                    opacity: 0;
+                    visibility: hidden;
+                    &.active{
+                        opacity: 1;
+                        visibility: visible;
+                    }
                     &-btn{
                         cursor: pointer;
                         border: none;
