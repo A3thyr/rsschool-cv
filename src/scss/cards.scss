@@ -79,20 +79,22 @@
                     }
                     &-input{
                         margin-left: 20px;
-                        width: 520px;
+                        width: 500px;
                         height: 66px;
                         flex-shrink: 0;
                         border-radius: 10px;
+                        padding-left: 20px;
                         border: none;
-                        color: #000;
+                        color: #BB945F;
+                        font-family: Forum;
                         font-size: 30px;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 50px; /* 166.667% */
                         letter-spacing: 0.6px;
-                        font-family: Forum;
+                        outline: none;
                         &::placeholder{
-                            padding-left: 20px;
+                            
                             color: #8E8E8E;
                             font-family: Forum;
                             font-size: 30px;
@@ -125,6 +127,9 @@
                     letter-spacing: 1px; 
                     background-color: #fff;
                     transition: 0.4s;
+                    &.disabled{
+                        display: none;
+                    }
                     &:hover{
                         transition: 0.4s;
                         border-radius: 2px;
@@ -132,8 +137,74 @@
                         background: #BB945F;
                     }
                 }
+                &-profile {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 35px;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 15px;
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    &.active{
+                        opacity: 1;
+                        visibility: visible;
+                        position: relative;
+                    }
+                    &-visits{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        &-span{
+                            color: #000;
+                            text-align: center;
+                            font-family: Inter;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px; /* 200% */
+                            letter-spacing: 0.2px;
+                            text-transform: capitalize;
+                        }
+                    }
+                    &-bonuses{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        &-span{
+                            color: #000;
+                            text-align: center;
+                            font-family: Inter;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px; /* 200% */
+                            letter-spacing: 0.2px;
+                            text-transform: capitalize;
+                        }
+                    }
+                    &-books{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        &-span{
+                            color: #000;
+                            text-align: center;
+                            font-family: Inter;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px; /* 200% */
+                            letter-spacing: 0.2px;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
             }
-
         }
         &-getcard{
             margin-bottom: auto;

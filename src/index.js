@@ -96,7 +96,6 @@ seasonBtnAutumn.addEventListener('click', () =>{
 
 const iconBtn = document.querySelector('.header-nav-logbtn-icon-btn')
 const regIconBtn = document.querySelector('.header-nav-logbtn-icon-namedbtn')
-const buyBtn = document.querySelector('.favorites-books-border-book-button')
 const iconMenu = document.querySelector('.header-nav-logbtn-menu')
 
 
@@ -119,11 +118,13 @@ regIconBtn.addEventListener('click', () => {
 const regBtn = document.getElementById('register')
 const regMenu = document.querySelector('.header-nav-logbtn-regmodal')
 const regClsBtn = document.querySelector('.header-nav-logbtn-regmodal-clsbtn')
-const cardBtn = document.querySelector('.cards-item-getcard-buttons-button')
+const cardRegBtn = document.getElementById('cardSignUp')
 
 const loginBtn = document.getElementById('login')
 const loginMenu = document.querySelector('.header-nav-logbtn-logmodal')
 const loginClsBtn = document.querySelector('.header-nav-logbtn-logmodal-clsbtn')
+const cardLogBtn = document.getElementById('cardLogIn')
+const buyBtn = document.querySelectorAll('.favorites-books-border-book-button')
 const overlay = document.querySelector('.overlay')
 
 regBtn.addEventListener('click', () => {
@@ -146,14 +147,21 @@ loginClsBtn.addEventListener('click', () => {
     overlay.classList.remove('active')
 });
 
-buyBtn.addEventListener('click', () => {
-    loginMenu.classList.toggle('active')
-    overlay.classList.toggle('active')
+buyBtn.forEach(button => {
+    button.addEventListener('click', () =>{
+        loginMenu.classList.toggle('active')
+        overlay.classList.toggle('active')
+    });
 });
 
 
-cardBtn.addEventListener('click', () => {
+cardRegBtn.addEventListener('click', () => {
     regMenu.classList.toggle('active')
+    overlay.classList.toggle('active')
+});
+
+cardLogBtn.addEventListener('click', () => {
+    loginMenu.classList.toggle('active')
     overlay.classList.toggle('active')
 });
 
@@ -181,7 +189,7 @@ registerBtn.addEventListener('click', () => {
     let password = document.getElementById('password').value
     
     let cardNumber = [];
-    let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+    let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
 
     for (var i = 0; i < 9; i++){
         cardNumber.push(hexRef[Math.floor(Math.random() * 16)]);
@@ -248,4 +256,27 @@ logoutBtn.addEventListener('click', () => {
     document.querySelector('.header-nav-logbtn-icon-btn').classList.remove('inactive')
     document.querySelector('.header-nav-logbtn-menu-prereg').classList.add('active')
     document.querySelector('.header-nav-logbtn-menu-reg').classList.remove('active')
+});
+
+
+// < ========================================================== >
+
+
+//checkcard
+
+const chkCardBtn = document.querySelector('.cards-item-find-border-button')
+const readInfo = document.querySelector('.cards-item-find-border-profile')
+
+
+chkCardBtn.addEventListener('click', () =>{
+    let storedPass = localStorage.getItem('password')
+    let storedNumb = localStorage.getItem('cardNumber')
+
+    let readCard = document.querySelector('.cards-item-find-border-bg-input').value
+    let readPassword = document.querySelector('.cards-item-find-border-bg-input').value
+
+    if (readCard == storedNumb && readPassword == storedPass){
+        chkCardBtn.classList.add('disabled')
+        readInfo.classList.add('active')
+    }
 });
