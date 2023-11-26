@@ -46,7 +46,7 @@
                         <button class="header-nav-logbtn-menu-prereg-btn" id="register">Register</button>
                     </div>
                     <div class="header-nav-logbtn-menu-reg">
-                        <button class="header-nav-logbtn-menu-reg-btn">My Profile</button>
+                        <button class="header-nav-logbtn-menu-reg-btn" id="myprofile">My Profile</button>
                         <button class="header-nav-logbtn-menu-reg-btn" id="logout">Log Out</button>
                     </div>
                 </div>
@@ -111,6 +111,97 @@
     <div class="backimg2">
         <img src="./img/Welcome (1).jpg">
     </div>
+    <div class="profile">
+        <div class="profile-bg">
+            <div class="profile-bg-icon">
+                <span class="profile-bg-icon-letters"></span>
+            </div>
+            <div class="profile-bg-icon-name">
+                <span class="profile-bg-icon-name-title"></span>
+            </div>
+        </div>
+        <div class="profile-content">
+            <span class="profile-content-title">My profile</span>
+            <button class="profile-content-clsbtn"><img src="./img/close_btn.svg"></button>
+            <div class="profile-content-info">
+                <div class="profile-content-info-visits">
+                    <span class="profile-content-info-visits-title">visits</span>
+                    <img src="./img/Union.svg">
+                    <span class="profile-content-info-visits-span"></span>
+                </div>
+                <div class="profile-content-info-bonuses">
+                    <span class="profile-content-info-bonuses-title">bonuses</span>
+                    <img src="./img/Star 1.svg">
+                    <span class="profile-content-info-bonuses-span">420</span>
+                </div>
+                <div class="profile-content-info-books">
+                    <span class="profile-content-info-books-title">Books</span>
+                    <img src="./img/book.svg">
+                    <span class="profile-content-info-books-span">0</span>
+                </div>
+            </div>
+            <div class="profile-content-bookinfo">
+                <span class="profile-content-bookinfo-title">Rented books</span>
+                <ul class="profile-content-bookinfo-ul">
+                    <li class="profile-content-bookinfo-ul-li">The Last Queen, Clive Irving</li>
+                    <li class="profile-content-bookinfo-ul-li">Dominicana, Angie Cruz</li>
+                </ul>
+            </div>
+            <div class="profile-content-cardinfo">
+                <span class="profile-content-cardinfo-title">Card number</span>
+                <span class="profile-content-cardinfo-number"></span>
+                <button class="profile-content-cardinfo-copy"><img src="./img/icon copy.svg"></button>
+            </div>
+        </div>
+    </div>
+    <div class="buycardmenu">
+        <div class="buycardmenu-top">
+            <span class="buycardmenu-top-title">Buy a library card</span>
+            <button class="buycardmenu-top-clsbtn"><img src="./img/close_btn (1).svg"></button>
+        </div>
+        <div class="buycardmenu-content">
+            <div class="buycardmenu-content-forms">
+                <form action="" class="buycardmenu-content-forms-form">
+                    <p class="buycardmenu-content-forms-form-p">
+                        <label for="" class="buycardmenu-content-forms-form-p-label">Bank card number</label>
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" minlength="16" maxlength="16" pattern="[0-9]{16}">
+                    </p>
+                    <p class="buycardmenu-content-forms-form-p">
+                        <label for="" class="buycardmenu-content-forms-form-p-label">Expiration code</label>
+                        <div class="buycardmenu-content-forms-form-p-excode">
+                            <input type="text" class="buycardmenu-content-forms-form-p-excode-input" id="excode" minlength="2" maxlength="2" pattern="[0-9]{2}">
+                            <input type="text" class="buycardmenu-content-forms-form-p-excode-input" id="excode" minlength="2" maxlength="2" pattern="[0-9]{2}">
+                        </div>
+                    </p>
+                    <p class="buycardmenu-content-forms-form-p">
+                        <label for="" class="buycardmenu-content-forms-form-p-label">CVC</label>
+                        <input type="text" class="buycardmenu-content-forms-form-p-input-cvc" id="cvc" minlength="3" maxlength="3" pattern="[0-9]{3}">
+                    </p>
+                    <p class="buycardmenu-content-forms-form-p">
+                        <label for="" class="buycardmenu-content-forms-form-p-label">Cardholder name</label>
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" pattern="[A-Za-z]">
+                    </p>
+                    <p class="buycardmenu-content-forms-form-p">
+                        <label for="" class="buycardmenu-content-forms-form-p-label">Postal code</label>
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" minlength="3" maxlength="10" pattern="[0-9]{3,10}">
+                    </p>
+                    <p class="buycardmenu-content-forms-form-p">
+                        <label for="" class="buycardmenu-content-forms-form-p-label">City / Town</label>
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" pattern="[A-Za-z]">
+                    </p>
+                </form>
+                <div class="buycardmenu-content-forms-botcontent">
+                    <button class="buycardmenu-content-forms-botcontent-btn">Buy</button>
+                    <span class="buycardmenu-content-forms-botcontent-price">$ 25.00</span>
+                </div>                
+            </div>
+            <span class="buycardmenu-content-span">
+                If you are live, work, attend school, or pay property taxes in New York State, you
+                can get a $25 digital library card right now using this online form. Visitors
+                to New York State can also use this form to apply for a temporary card.
+            </span>
+        </div>
+    </div>
     <div class="overlay"></div>
     <section id="about" class="about">
         <div class="about-title">
@@ -120,21 +211,19 @@
         <span class="about-span">The Brooklyn Library is a free 
             workspace, a large number of books and a cozy coffee shop inside </span>
         <div class="about-img">
-            <div class="about-img-arrowleft"><img src="./img/Carret_Left.svg" alt="arrowleft"></div>
             <button class="about-img-arrowleft"><img src="./img/Carret_Left.svg" alt="arrowleft"></button>
             <div class="about-img-img1"><img src="./img/image 1.jpg" alt="img1"></div>
-            <div class="about-img-img2"><img src="./img/image 2.jpg" alt="img2"></div>
-            <div class="about-img-img3"><img src="./img/image 3.jpg" alt="img3"></div>
-
-            <div class="about-img-img4"><img src="./img/image 3 (1).jpg" alt="img4"></div>
-            <div class="about-img-img5"><img src="./img/image 3 (2).jpg" alt="img5"></div>
+            <div class="about-img-img1"><img src="./img/image 2.jpg" alt="img2"></div>
+            <div class="about-img-img1"><img src="./img/image 3.jpg" alt="img3"></div>
+            <div class="about-img-img1"><img src="./img/image 3 (1).jpg" alt="img4"></div>
+            <div class="about-img-img1"><img src="./img/image 3 (2).jpg" alt="img5"></div>
             <button class="about-img-arrowright"><img src="./img/Carret_Right.svg" alt="arrowright"></button>
         </div>
         <div class="about-ping">
             <ul class="about-ping-ul">
-                <li class="about-ping-ul-button active"></li>
-                <li class="about-ping-ul-button"></li>
-                <li class="about-ping-ul-button"></li>
+                <li class="about-ping-ul-button active" id="first"></li>
+                <li class="about-ping-ul-button" id="second"></li>
+                <li class="about-ping-ul-button" id="third"></li>
             </ul>
         </div>
         <div class="about-pingtablet">
@@ -691,17 +780,17 @@
                     <button class="cards-item-find-border-button">Check the card</button>
                     <div class="cards-item-find-border-profile">
                         <div class="cards-item-find-border-profile-visits">
-                            <span class="cards-item-find-border-profile-visits-span">visits</span>
+                            <span class="cards-item-find-border-profile-visits-title">visits</span>
                             <img src="./img/Union.svg">
-                            <span class="cards-item-find-border-profile-visits-span">0</span>
+                            <span class="cards-item-find-border-profile-visits-span"></span>
                         </div>
                         <div class="cards-item-find-border-profile-bonuses">
-                            <span class="cards-item-find-border-profile-visits-span">bonuses</span>
+                            <span class="cards-item-find-border-profile-visits-title">bonuses</span>
                             <img src="./img/Star 1.svg">
                             <span class="cards-item-find-border-profile-visits-span">420</span>
                         </div>
                         <div class="cards-item-find-border-profile-books">
-                            <span class="cards-item-find-border-profile-visits-span">Books</span>
+                            <span class="cards-item-find-border-profile-visits-title">Books</span>
                             <img src="./img/book.svg">
                             <span class="cards-item-find-border-profile-visits-span">0</span>
                         </div>

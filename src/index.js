@@ -12,6 +12,8 @@ const menu = document.querySelector(".header-nav-list")
 const menuBtn = document.querySelector(".header-nav-logbtn-burgerbtn")
 const menuBtnClose = document.querySelector(".header-nav-list-buttons-exit")
 
+
+
 if (menu && menuBtn && menuBtnClose){
     menuBtn.addEventListener('click', () =>{
         menu.classList.toggle('active')
@@ -35,8 +37,60 @@ if (menu && menuBtn && menuBtnClose){
 
 //carousel
 
+const slides = document.querySelector('.about-img-img1')
+const wrapper = document.querySelector('.about-img')
+
+let curSlide = 0;
+let maxSlide = slides.length - 1;
 
 
+const nextSlide = document.querySelector('.about-img-arrowright')
+const prevSlide = document.querySelector('.about-img-arrowleft')
+const owlBtnDesk = document.querySelector('.about-ping-ul')
+
+owlBtnDesk.addEventListener('click', e =>{
+    if (e.target.nodeName === 'LI'){
+        Array.from(owlBtnDesk.children).forEach(item => 
+            item.classList.remove('active')    
+        );
+        if (e.target.id === 'first'){
+            wrapper.style.transform = "translateX(-0%)";
+            e.target.classList.add('active');
+        } else if (e.target.id === 'second') {
+            wrapper.style.transform = "translateX(-34%)";
+            e.target.classList.add('active');
+        } else if (e.target.id === 'third') {
+            wrapper.style.transform = "translateX(-68%)";
+            e.target.classList.add('active'); 
+        }
+    }
+});
+
+nextSlide.addEventListener('click', () =>{
+    
+    if (curSlide === maxSlide){
+        curSlide = 0;
+    } else {
+        curSlide++;
+    }
+   
+    slides.forEach((slide,indx) =>{
+        slide.style.transform = `translateX(${20 * (indx - curSlide)}%)`;
+    });
+
+});
+
+prevSlide.addEventListener('click', () => {
+    if (curSlide === 0){
+        curSlide = maxSlide;
+    } else {
+        curSlide--;
+    }
+
+    slides.forEach((slide,indx) =>{
+        slide.style.transform = `translateX(${20 * (indx - curSlide)}%)`;
+    });
+});
 
 
 // < ========================================================== >
@@ -109,10 +163,15 @@ const regBtn = document.getElementById('register')
 const regMenu = document.querySelector('.header-nav-logbtn-regmodal')
 const regClsBtn = document.querySelector('.header-nav-logbtn-regmodal-clsbtn')
 const cardRegBtn = document.getElementById('cardSignUp')
-
+const buyCardMenu = document.querySelector('.buycardmenu')
 const loginBtn = document.getElementById('login')
 const loginMenu = document.querySelector('.header-nav-logbtn-logmodal')
 const loginClsBtn = document.querySelector('.header-nav-logbtn-logmodal-clsbtn')
+const profMenu = document.querySelector('.profile')
+const myProfBtn = document.getElementById('myprofile')
+const cardProfBtn = document.querySelector('.cards-item-visitprofile-buttons-button')
+const profMenuCls = document.querySelector('.profile-content-clsbtn')
+const buyCardMenuClsBtn = document.querySelector('.buycardmenu-top-clsbtn')
 const cardLogBtn = document.getElementById('cardLogIn')
 const buyBtn = document.querySelectorAll('.favorites-books-border-book-button')
 const overlay = document.querySelector('.overlay')
@@ -120,6 +179,7 @@ const overlay = document.querySelector('.overlay')
 regBtn.addEventListener('click', () => {
     regMenu.classList.toggle('active')
     overlay.classList.toggle('active')
+    iconMenu.classList.remove('active')
 });
 
 regClsBtn.addEventListener('click', () => {
@@ -130,6 +190,7 @@ regClsBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     loginMenu.classList.toggle('active')
     overlay.classList.toggle('active')
+    iconMenu.classList.remove('active')
 });
 
 loginClsBtn.addEventListener('click', () => {
@@ -148,6 +209,37 @@ buyBtn.forEach(button => {
     });
 });
 
+buyBtn.forEach(button => {
+    button.addEventListener('click', () =>{
+        if ((document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))){ 
+            buyCardMenu.classList.toggle('active')
+            overlay.classList.toggle('active')
+        } else{
+            return 0;
+        }  
+    });
+});
+
+buyCardMenuClsBtn.addEventListener('click', () =>{
+    buyCardMenu.classList.remove('active')
+    overlay.classList.remove('active')
+});
+
+myProfBtn.addEventListener('click', () => {
+    profMenu.classList.add('active')
+    overlay.classList.add('active')
+    iconMenu.classList.remove('active')
+});
+
+cardProfBtn.addEventListener('click', () => {
+    profMenu.classList.add('active')
+    overlay.classList.add('active')
+});
+
+profMenuCls.addEventListener('click', () => {
+    profMenu.classList.remove('active')
+    overlay.classList.remove('active')
+});
 
 cardRegBtn.addEventListener('click', () => {
     regMenu.classList.toggle('active')
@@ -161,7 +253,9 @@ cardLogBtn.addEventListener('click', () => {
 
 overlay.addEventListener('click', () => {
     regMenu.classList.remove('active')
+    buyCardMenu.classList.remove('active')
     loginMenu.classList.remove('active')
+    profMenu.classList.remove('active')
     overlay.classList.remove('active')
 });
 
@@ -169,7 +263,7 @@ overlay.addEventListener('click', () => {
 // < ========================================================== >
 
 
-//localStorage
+//localStorage & validation
 
 const registerBtn = document.querySelector('.header-nav-logbtn-regmodal-forms-login')
 const logInBtn = document.querySelector('.header-nav-logbtn-logmodal-forms-login')
@@ -181,6 +275,8 @@ registerBtn.addEventListener('click', () => {
     let lastName = document.getElementById('lastname').value
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
+    let visits = 0;
+    let books = 0;
     
     let cardNumber = [];
     let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
@@ -196,6 +292,8 @@ registerBtn.addEventListener('click', () => {
     localStorage.setItem('email', email)
     localStorage.setItem('password', password)
     localStorage.setItem('cardNumber', cardNumber)
+    localStorage.setItem('visits', visits)
+    localStorage.setItem('books', books)
 
     regMenu.classList.remove('active')
     overlay.classList.remove('active')
@@ -235,9 +333,25 @@ logInBtn.addEventListener('click', () => {
         let lettersName = document.createTextNode(`${firstNameLetter + lastNameLetter}`)
         let iconBtnLetters = document.querySelector('.header-nav-logbtn-icon-namedbtn') 
         let readName = localStorage.getItem('firstName') + ' ' + localStorage.getItem('lastName')
+        let iconProfLetters = document.querySelector('.profile-bg-icon-letters')
+        let profName = document.querySelector('.profile-bg-icon-name-title')
+        let profCardNum = document.querySelector('.profile-content-cardinfo-number')
+        let visits = localStorage.getItem('visits')
+        let visitsCount = document.querySelector('.profile-content-info-visits-span')
+        let visitsCountCard = document.querySelector('.cards-item-find-border-profile-visits-span')
+        let letName = document.createTextNode(`${firstNameLetter + lastNameLetter}`);
         
+        visits = +visits;
+        visits += 1;
 
-        iconBtnLetters.append(lettersName)
+        localStorage.setItem('visits',visits)
+
+        iconProfLetters.append(lettersName);
+        iconBtnLetters.append(letName);
+        profName.append(readName);
+        profCardNum.append(storedNumb);
+        visitsCount.append(visits);
+        visitsCountCard.append(visits);
 
         document.querySelector('.header-nav-logbtn-menu-prereg').classList.remove('active')
         document.querySelector('.header-nav-logbtn-menu-reg').classList.add('active')
@@ -297,3 +411,25 @@ chkCardBtn.addEventListener('click', () =>{
     setTimeout(delay, 10000);
 });
 
+
+// < ========================================================== >
+
+
+//buy card modal popup
+
+
+
+
+
+// < ========================================================== >
+
+
+//copy button
+
+const copyBtn = document.querySelector('.profile-content-cardinfo-copy')
+
+
+copyBtn.addEventListener('click', () => {
+    let cardNumber = localStorage.getItem('cardNumber')
+    navigator.clipboard.writeText(cardNumber)
+});
