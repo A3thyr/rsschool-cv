@@ -1,7 +1,6 @@
 import './styles.scss'
 
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+
 // import Swiper and modules styles
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -31,22 +30,13 @@ if (menu && menuBtn && menuBtnClose){
     })
 }
 
+
 // < ========================================================== >
 
-// init Swiper:
-const swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    modules: [Navigation, Pagination],
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-});
+//carousel
+
+
+
 
 
 // < ========================================================== >
@@ -149,8 +139,12 @@ loginClsBtn.addEventListener('click', () => {
 
 buyBtn.forEach(button => {
     button.addEventListener('click', () =>{
-        loginMenu.classList.toggle('active')
-        overlay.classList.toggle('active')
+        if (!(document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))){ 
+            loginMenu.classList.toggle('active')
+            overlay.classList.toggle('active')
+        } else{
+            return 0;
+        }  
     });
 });
 
@@ -239,12 +233,25 @@ logInBtn.addEventListener('click', () => {
         let firstNameLetter = localStorage.getItem('firstName').charAt(0).toUpperCase()
         let lastNameLetter = localStorage.getItem('lastName').charAt(0).toUpperCase()
         let lettersName = document.createTextNode(`${firstNameLetter + lastNameLetter}`)
-        let iconBtnLetters = document.querySelector('.header-nav-logbtn-icon-namedbtn')
+        let iconBtnLetters = document.querySelector('.header-nav-logbtn-icon-namedbtn') 
+        let readName = localStorage.getItem('firstName') + ' ' + localStorage.getItem('lastName')
+        
 
         iconBtnLetters.append(lettersName)
 
         document.querySelector('.header-nav-logbtn-menu-prereg').classList.remove('active')
         document.querySelector('.header-nav-logbtn-menu-reg').classList.add('active')
+
+        document.querySelector('.cards-item-getcard').classList.add('disabled')
+        document.querySelector('.cards-item-visitprofile').classList.add('active')
+
+        
+        document.getElementById('firstName').value = readName;
+        document.getElementById('cardNumber').value = storedNumb;
+        chkCardBtn.classList.add('disabled')
+        readInfo.classList.add('active')
+
+
     } else {
         alert("Incorrect e-mail/card number or password")
     }
@@ -256,6 +263,8 @@ logoutBtn.addEventListener('click', () => {
     document.querySelector('.header-nav-logbtn-icon-btn').classList.remove('inactive')
     document.querySelector('.header-nav-logbtn-menu-prereg').classList.add('active')
     document.querySelector('.header-nav-logbtn-menu-reg').classList.remove('active')
+    document.querySelector('.cards-item-getcard').classList.remove('disabled')
+    document.querySelector('.cards-item-visitprofile').classList.remove('active')
 });
 
 
@@ -269,14 +278,22 @@ const readInfo = document.querySelector('.cards-item-find-border-profile')
 
 
 chkCardBtn.addEventListener('click', () =>{
-    let storedPass = localStorage.getItem('password')
+    let storedName = localStorage.getItem('firstName')
     let storedNumb = localStorage.getItem('cardNumber')
 
-    let readCard = document.querySelector('.cards-item-find-border-bg-input').value
-    let readPassword = document.querySelector('.cards-item-find-border-bg-input').value
+    let readCard = document.getElementById('cardNumber').value
+    let readName = document.getElementById('firstName').value
 
-    if (readCard == storedNumb && readPassword == storedPass){
+    if (readCard == storedNumb && readName == storedName && !(document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))){
         chkCardBtn.classList.add('disabled')
         readInfo.classList.add('active')
     }
+
+    function delay(){
+        chkCardBtn.classList.remove('disabled')
+        readInfo.classList.remove('active')
+    }
+
+    setTimeout(delay, 10000);
 });
+

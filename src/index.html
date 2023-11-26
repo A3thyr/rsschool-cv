@@ -119,17 +119,32 @@
         </div>
         <span class="about-span">The Brooklyn Library is a free 
             workspace, a large number of books and a cozy coffee shop inside </span>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./img/image 1.jpg" alt="img1"></div>
-                <div class="swiper-slide"><img src="./img/image 2.jpg" alt="img2"></div>
-                <div class="swiper-slide"><img src="./img/image 3.jpg" alt="img3"></div>
-                <div class="swiper-slide"><img src="./img/image 3 (1).jpg" alt="img4"></div>
-                <div class="swiper-slide"><img src="./img/image 3 (2).jpg" alt="img5"></div>
-            </div>
-            <div class="swiper-button-next"></button>
-            <div class="swiper-button-prev"></button>
-            <div class="swiper-pagination"></div>
+        <div class="about-img">
+            <div class="about-img-arrowleft"><img src="./img/Carret_Left.svg" alt="arrowleft"></div>
+            <button class="about-img-arrowleft"><img src="./img/Carret_Left.svg" alt="arrowleft"></button>
+            <div class="about-img-img1"><img src="./img/image 1.jpg" alt="img1"></div>
+            <div class="about-img-img2"><img src="./img/image 2.jpg" alt="img2"></div>
+            <div class="about-img-img3"><img src="./img/image 3.jpg" alt="img3"></div>
+
+            <div class="about-img-img4"><img src="./img/image 3 (1).jpg" alt="img4"></div>
+            <div class="about-img-img5"><img src="./img/image 3 (2).jpg" alt="img5"></div>
+            <button class="about-img-arrowright"><img src="./img/Carret_Right.svg" alt="arrowright"></button>
+        </div>
+        <div class="about-ping">
+            <ul class="about-ping-ul">
+                <li class="about-ping-ul-button active"></li>
+                <li class="about-ping-ul-button"></li>
+                <li class="about-ping-ul-button"></li>
+            </ul>
+        </div>
+        <div class="about-pingtablet">
+            <ul class="about-pingtablet-ul">
+                <li class="about-pingtablet-ul-button active"></li>
+                <li class="about-pingtablet-ul-button"></li>
+                <li class="about-pingtablet-ul-button"></li>
+                <li class="about-pingtablet-ul-button"></li>
+                <li class="about-pingtablet-ul-button"></li>
+            </ul>
         </div>
     </section>
     <section id="favorites" class="favorites">
@@ -670,8 +685,8 @@
                 <div class="cards-item-find-border">
                     <div class="cards-item-find-border-bg">
                         <span class="cards-item-find-border-bg-title">Brooklyn Public Library</span>
-                        <input type="text" class="cards-item-find-border-bg-input" placeholder="Reader's name">
-                        <input type="number" class="cards-item-find-border-bg-input" placeholder="Card number">
+                        <input type="text" class="cards-item-find-border-bg-input" id="firstName" placeholder="Reader's name">
+                        <input type="text" class="cards-item-find-border-bg-input" id="cardNumber" placeholder="Card number">
                     </div>
                     <button class="cards-item-find-border-button">Check the card</button>
                     <div class="cards-item-find-border-profile">
@@ -702,6 +717,17 @@
                 <div class="cards-item-getcard-buttons">
                     <button class="cards-item-getcard-buttons-button" id="cardSignUp">Sign Up</button>
                     <button class="cards-item-getcard-buttons-button" id="cardLogIn">Log in</button>
+                </div>
+            </div>
+            <div class="cards-item-visitprofile">
+                <span class="cards-item-visitprofile-title">Visit your profile</span>
+                <p class="cards-item-visitprofile-span">
+                    With a digital library card you get free access
+                    to the Library’s wide array of digital resources
+                    including e-books, databases, educational resources, and more.
+                </p>
+                <div class="cards-item-visitprofile-buttons">
+                    <button class="cards-item-visitprofile-buttons-button" id="profile">Profile</button>
                 </div>
             </div>
         </div>
