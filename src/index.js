@@ -1,13 +1,5 @@
 import './styles.scss'
 
-
-// import Swiper and modules styles
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
-
-
-
 const menu = document.querySelector(".header-nav-list")
 const menuBtn = document.querySelector(".header-nav-logbtn-burgerbtn")
 const menuBtnClose = document.querySelector(".header-nav-list-buttons-exit")
@@ -174,6 +166,7 @@ const profMenuCls = document.querySelector('.profile-content-clsbtn')
 const buyCardMenuClsBtn = document.querySelector('.buycardmenu-top-clsbtn')
 const cardLogBtn = document.getElementById('cardLogIn')
 const buyBtn = document.querySelectorAll('.favorites-books-border-book-button')
+const buyBook = document.getElementById('bookBuyBtn')
 const overlay = document.querySelector('.overlay')
 
 regBtn.addEventListener('click', () => {
@@ -211,11 +204,50 @@ buyBtn.forEach(button => {
 
 buyBtn.forEach(button => {
     button.addEventListener('click', () =>{
-        if ((document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))){ 
+        const validCard = localStorage.getItem('bankCardNumb')
+        let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+        const book1 = document.getElementById('bookBuyBtn1')
+        const book2 = document.getElementById('bookBuyBtn2')
+        const book3 = document.getElementById('bookBuyBtn3')
+        const book4 = document.getElementById('bookBuyBtn4')
+        const book5 = document.getElementById('bookBuyBtn5')
+        const book6 = document.getElementById('bookBuyBtn6')
+        const book7 = document.getElementById('bookBuyBtn7')
+        const book8 = document.getElementById('bookBuyBtn8')
+        const book9 = document.getElementById('bookBuyBtn9')
+        const book10 = document.getElementById('bookBuyBtn10')
+        const book11 = document.getElementById('bookBuyBtn11')
+        const book12 = document.getElementById('bookBuyBtn12')
+        const book13 = document.getElementById('bookBuyBtn13')
+        const book14 = document.getElementById('bookBuyBtn14')
+        const book15 = document.getElementById('bookBuyBtn15')
+        const book16 = document.getElementById('bookBuyBtn16')
+        let ul = document.querySelector('.profile-content-bookinfo-ul')
+        let li = document.createElement('li')
+        
+
+        if ((document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active')) && validCard == undefined){ 
             buyCardMenu.classList.toggle('active')
             overlay.classList.toggle('active')
-        } else{
-            return 0;
+        } else if(button == book1) {
+            let name1 = document.getElementById('name1').innerHTML
+            let author1 = document.getElementById('author1').innerHTML
+            localStorage.setItem('name1',name1)
+            localStorage.setItem('author1',author1)
+            const nameAuthor1 = document.createTextNode(`${localStorage.getItem('name1') + ', ' + localStorage.getItem('author1').slice(3)}`)
+            localStorage.setItem('nameAuthor1', nameAuthor1)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor1);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
         }  
     });
 });
@@ -298,26 +330,15 @@ registerBtn.addEventListener('click', () => {
     regMenu.classList.remove('active')
     overlay.classList.remove('active')
 
-
-
-    document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.add('active')
-    document.querySelector('.header-nav-logbtn-icon-btn').classList.add('inactive')
-
-    let firstNameLetter = localStorage.getItem('firstName').charAt(0).toUpperCase()
-    let lastNameLetter = localStorage.getItem('lastName').charAt(0).toUpperCase()
-    let lettersName = document.createTextNode(`${firstNameLetter + lastNameLetter}`)
-    let iconBtnLetters = document.querySelector('.header-nav-logbtn-icon-namedbtn')
-
-    iconBtnLetters.append(lettersName)
-
-    document.querySelector('.header-nav-logbtn-menu-prereg').classList.remove('active')
-    document.querySelector('.header-nav-logbtn-menu-reg').classList.add('active')
 });
 
 logInBtn.addEventListener('click', () => {
     let storedMail = localStorage.getItem('email')
     let storedPass = localStorage.getItem('password')
     let storedNumb = localStorage.getItem('cardNumber')
+    let ul = document.querySelector('.profile-content-bookinfo-ul')
+    let li = document.createElement('li')
+    let nameAuthor1 = localStorage.getItem('nameAuthor1')
 
     let userEmail = document.getElementById('userEmail').value
     let userPassword = document.getElementById('userPassword').value
@@ -341,6 +362,7 @@ logInBtn.addEventListener('click', () => {
         let visitsCountCard = document.querySelector('.cards-item-find-border-profile-visits-span')
         let letName = document.createTextNode(`${firstNameLetter + lastNameLetter}`);
         
+        
         visits = +visits;
         visits += 1;
 
@@ -352,6 +374,7 @@ logInBtn.addEventListener('click', () => {
         profCardNum.append(storedNumb);
         visitsCount.append(visits);
         visitsCountCard.append(visits);
+        
 
         document.querySelector('.header-nav-logbtn-menu-prereg').classList.remove('active')
         document.querySelector('.header-nav-logbtn-menu-reg').classList.add('active')
@@ -365,10 +388,21 @@ logInBtn.addEventListener('click', () => {
         chkCardBtn.classList.add('disabled')
         readInfo.classList.add('active')
 
+        if(nameAuthor1 !== undefined){
+            const bookBtn1 = document.getElementById('bookBuyBtn1');
+            bookBtn1.setAttribute('disabled','');
+            bookBtn1.innerHTML = "Own";
+            li.appendChild(nameAuthor1);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        }
+
 
     } else {
         alert("Incorrect e-mail/card number or password")
     }
+
+    
 });
 
 logoutBtn.addEventListener('click', () => {
@@ -417,8 +451,32 @@ chkCardBtn.addEventListener('click', () =>{
 
 //buy card modal popup
 
+const buyCardBtn = document.querySelector('.buycardmenu-content-forms-botcontent-btn')
+const monthInput = document.getElementById('month')
 
 
+monthInput.addEventListener('input', (event) => {
+    const value = event.target.value.toString();
+
+    if (value.length === 1 && value > 1){
+        event.target.value = "0" + value;
+    }
+
+    if (value === "00"){
+        event.target.value = "01";
+    } else if (value > 12) {
+        event.target.value = "12"
+    }
+});
+
+buyCardBtn.addEventListener('click', () => {
+    let bankCardNumb = document.getElementById('bankcardnumber').value
+
+
+    buyCardMenu.classList.remove('active')
+    overlay.classList.remove('active')
+    localStorage.setItem('bankCardNumb',bankCardNumb)
+});
 
 
 // < ========================================================== >

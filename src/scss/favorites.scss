@@ -196,7 +196,7 @@
                             border: 1px solid #BB945F;
                             background: #BB945F;
                         }
-                        &.disabled{
+                        &:disabled{
                             width: 75px;
                             height: 30px;
                             flex-shrink: 0;

@@ -137,14 +137,13 @@
                 <div class="profile-content-info-books">
                     <span class="profile-content-info-books-title">Books</span>
                     <img src="./img/book.svg">
-                    <span class="profile-content-info-books-span">0</span>
+                    <span class="profile-content-info-books-span"></span>
                 </div>
             </div>
             <div class="profile-content-bookinfo">
                 <span class="profile-content-bookinfo-title">Rented books</span>
                 <ul class="profile-content-bookinfo-ul">
-                    <li class="profile-content-bookinfo-ul-li">The Last Queen, Clive Irving</li>
-                    <li class="profile-content-bookinfo-ul-li">Dominicana, Angie Cruz</li>
+                    
                 </ul>
             </div>
             <div class="profile-content-cardinfo">
@@ -164,13 +163,13 @@
                 <form action="" class="buycardmenu-content-forms-form">
                     <p class="buycardmenu-content-forms-form-p">
                         <label for="" class="buycardmenu-content-forms-form-p-label">Bank card number</label>
-                        <input type="text" class="buycardmenu-content-forms-form-p-input" minlength="16" maxlength="16" pattern="[0-9]{16}">
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" id="bankcardnumber" minlength="16" maxlength="16" pattern="[0-9]{16}">
                     </p>
                     <p class="buycardmenu-content-forms-form-p">
                         <label for="" class="buycardmenu-content-forms-form-p-label">Expiration code</label>
                         <div class="buycardmenu-content-forms-form-p-excode">
-                            <input type="text" class="buycardmenu-content-forms-form-p-excode-input" id="excode" minlength="2" maxlength="2" pattern="[0-9]{2}">
-                            <input type="text" class="buycardmenu-content-forms-form-p-excode-input" id="excode" minlength="2" maxlength="2" pattern="[0-9]{2}">
+                            <input type="text" class="buycardmenu-content-forms-form-p-excode-input" id="month" minlength="2" maxlength="2" pattern="[0-9]{2}">
+                            <input type="text" class="buycardmenu-content-forms-form-p-excode-input" id="year" minlength="2" maxlength="2" pattern="[0-9]{2}">
                         </div>
                     </p>
                     <p class="buycardmenu-content-forms-form-p">
@@ -179,7 +178,7 @@
                     </p>
                     <p class="buycardmenu-content-forms-form-p">
                         <label for="" class="buycardmenu-content-forms-form-p-label">Cardholder name</label>
-                        <input type="text" class="buycardmenu-content-forms-form-p-input" pattern="[A-Za-z]">
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" pattern="[a-z]{1,32}">
                     </p>
                     <p class="buycardmenu-content-forms-form-p">
                         <label for="" class="buycardmenu-content-forms-form-p-label">Postal code</label>
@@ -187,7 +186,7 @@
                     </p>
                     <p class="buycardmenu-content-forms-form-p">
                         <label for="" class="buycardmenu-content-forms-form-p-label">City / Town</label>
-                        <input type="text" class="buycardmenu-content-forms-form-p-input" pattern="[A-Za-z]">
+                        <input type="text" class="buycardmenu-content-forms-form-p-input" pattern="[A-Za-z]{1,32}">
                     </p>
                 </form>
                 <div class="buycardmenu-content-forms-botcontent">
@@ -269,8 +268,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">The Book Eaters</span>
-                                <span class="favorites-books-border-book-text-name-author">By Sunyi Dean</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name1">The Book Eaters</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author1">By Sunyi Dean</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 An unusual sci-fi story about a book eater woman 
@@ -280,7 +279,7 @@
                                 protagonist. Not for the faint of heart.       
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn1">
                             Buy
                         </button>
                     </div>
@@ -295,8 +294,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Cackle</span>
-                                <span class="favorites-books-border-book-text-name-author">By Rachel Harrison</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name2">Cackle</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author2">By Rachel Harrison</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 Are your Halloween movies of choice The Witches 
@@ -305,7 +304,7 @@
                                 town in upstate New York and befriends a beautiful witch.                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn2">
                             Buy
                         </button>
                     </div>
@@ -320,8 +319,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Dante: Poet of the Secular World</span>
-                                <span class="favorites-books-border-book-text-name-author">By Erich Auerbach</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name3">Dante: Poet of the Secular World</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author3">By Erich Auerbach</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 Auerbach's engaging book places the 'Comedy' 
@@ -331,7 +330,7 @@
                                 of divine significance—an inspired introduction to Dante's main themes.                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn3">
                             Buy
                         </button>
                     </div>
@@ -346,8 +345,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">The Last Queen</span>
-                                <span class="favorites-books-border-book-text-name-author">By Clive Irving</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name4">The Last Queen</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author4">By Clive Irving</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 A timely and revelatory new biography of 
@@ -355,7 +354,7 @@
                                  evolved and thrived as the modern world has changed around them.                   
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn4">
                             Buy
                         </button>
                     </div>
@@ -371,8 +370,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">The Body</span>
-                                <span class="favorites-books-border-book-text-name-author">By Stephen King</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name5">The Body</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author5">By Stephen King</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 Powerful novel that takes you back to a nostalgic 
@@ -380,7 +379,7 @@
                                 of innocence that is youth.       
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn5">
                             Buy
                         </button>
                     </div>
@@ -395,8 +394,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Carry: A Memoir of Survival on Stolen Land</span>
-                                <span class="favorites-books-border-book-text-name-author">By Toni Jenson</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name6">Carry: A Memoir of Survival on Stolen Land</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author6">By Toni Jenson</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 This memoir about the author's relationship 
@@ -404,7 +403,7 @@
                                 resulting in a lyrical indictment of the way things are.                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn6">
                             Buy
                         </button>
                     </div>
@@ -419,8 +418,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Days of Distraction</span>
-                                <span class="favorites-books-border-book-text-name-author">By Alexandra Chang</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name7">Days of Distraction</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author7">By Alexandra Chang</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 A sardonic view of Silicon Valley culture, a meditation on
@@ -428,7 +427,7 @@
                                   form-defying package of spare prose.                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn7">
                             Buy
                         </button>
                     </div>
@@ -443,8 +442,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Dominicana</span>
-                                <span class="favorites-books-border-book-text-name-author">By Angie Cruz</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name8">Dominicana</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author8">By Angie Cruz</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 A fascinating story of a teenage girl who marries a man
@@ -453,7 +452,7 @@
                                    For fans of Isabel Allende and Julia Alvarez.                   
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn8">
                             Buy
                         </button>
                     </div>
@@ -469,8 +468,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Crude: A Memoir</span>
-                                <span class="favorites-books-border-book-text-name-author">By Pablo Fajardo & ​​Sophie Tardy-Joubert</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name9">Crude: A Memoir</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author9">By Pablo Fajardo & ​​Sophie Tardy-Joubert</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 Drawing and color by Damien Roudeau | This book illustrates 
@@ -479,7 +478,7 @@
                                  to the Amazon and her people       
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn9">
                             Buy
                         </button>
                     </div>
@@ -494,8 +493,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Let My People Go Surfing</span>
-                                <span class="favorites-books-border-book-text-name-author">By Yvon Chouinard</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name10">Let My People Go Surfing</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author10">By Yvon Chouinard</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 Chouinard—climber, businessman, environmentalist—shares tales of
@@ -504,7 +503,7 @@
                                   The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn10">
                             Buy
                         </button>
                     </div>
@@ -519,8 +518,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">The Octopus Museum: Poems</span>
-                                <span class="favorites-books-border-book-text-name-author">By Brenda Shaughnessy</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name11">The Octopus Museum: Poems</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author11">By Brenda Shaughnessy</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 This collection of bold and scathingly beautiful feminist 
@@ -528,7 +527,7 @@
                                 environmental destruction, racism, sexism, and divisive politics.                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn11">
                             Buy
                         </button>
                     </div>
@@ -543,8 +542,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Shark Dialogues: A Novel</span>
-                                <span class="favorites-books-border-book-text-name-author">By Kiana Davenport</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name12">Shark Dialogues: A Novel</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author12">By Kiana Davenport</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 An epic saga of seven generations of one family encompasses 
@@ -553,7 +552,7 @@
                                  of villains and dreamers, queens and revolutionaries, lepers and healers.                   
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn12">
                             Buy
                         </button>
                     </div>
@@ -569,8 +568,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Casual Conversation</span>
-                                <span class="favorites-books-border-book-text-name-author">By Renia White</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name13">Casual Conversation</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author13">By Renia White</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 White's impressive debut collection takes readers 
@@ -579,7 +578,7 @@
                                 examining the possibilities around how we construct and communicate identity. 
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn13">
                             Buy
                         </button>
                     </div>
@@ -594,8 +593,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">The Great Fire</span>
-                                <span class="favorites-books-border-book-text-name-author">By Lou Ureneck</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name14">The Great Fire</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author14">By Lou Ureneck</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 The harrowing story of an ordinary American and a 
@@ -604,7 +603,7 @@
                                 quarter of a million refugees from the Armenian Genocide                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn14">
                             Buy
                         </button>
                     </div>
@@ -619,8 +618,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Rickey: The Life and Legend</span>
-                                <span class="favorites-books-border-book-text-name-author">By Howard Bryant</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name15">Rickey: The Life and Legend</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author15">By Howard Bryant</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 With the fall rolling around, one can't help but 
@@ -630,7 +629,7 @@
                                  the Man of Steal, Rickey Henderson?                    
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn15">
                             Buy
                         </button>
                     </div>
@@ -645,8 +644,8 @@
                                 <div class="favorites-books-border-book-text-title-line"></div>
                             </div>
                             <div class="favorites-books-border-book-text-name">
-                                <span class="favorites-books-border-book-text-name-bookname">Slug: And Other Stories</span>
-                                <span class="favorites-books-border-book-text-name-author">By Megan Milks</span>
+                                <span class="favorites-books-border-book-text-name-bookname" id="name16">Slug: And Other Stories</span>
+                                <span class="favorites-books-border-book-text-name-author" id="author16">By Megan Milks</span>
                             </div>
                             <p class="favorites-books-border-book-text-desc">
                                 Exes Tegan and Sara find themselves chained together 
@@ -654,7 +653,7 @@
                                 the shared trauma of giving birth to gods from their wounds.                   
                             </p>
                         </div>
-                        <button class="favorites-books-border-book-button" id="bookBuyBtn">
+                        <button class="favorites-books-border-book-button" id="bookBuyBtn16">
                             Buy
                         </button>
                     </div>
@@ -785,14 +784,14 @@
                             <span class="cards-item-find-border-profile-visits-span"></span>
                         </div>
                         <div class="cards-item-find-border-profile-bonuses">
-                            <span class="cards-item-find-border-profile-visits-title">bonuses</span>
+                            <span class="cards-item-find-border-profile-bonuses-title">bonuses</span>
                             <img src="./img/Star 1.svg">
-                            <span class="cards-item-find-border-profile-visits-span">420</span>
+                            <span class="cards-item-find-border-profile-bonuses-span">420</span>
                         </div>
                         <div class="cards-item-find-border-profile-books">
-                            <span class="cards-item-find-border-profile-visits-title">Books</span>
+                            <span class="cards-item-find-border-profile-books-title">Books</span>
                             <img src="./img/book.svg">
-                            <span class="cards-item-find-border-profile-visits-span">0</span>
+                            <span class="cards-item-find-border-profile-books-span">0</span>
                         </div>
                     </div>
                 </div>  
