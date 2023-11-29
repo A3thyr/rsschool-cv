@@ -205,9 +205,6 @@ buyBtn.forEach(button => {
 buyBtn.forEach(button => {
     button.addEventListener('click', () =>{
         const validCard = localStorage.getItem('bankCardNumb')
-        let books = localStorage.getItem('books')
-        let booksCount = document.querySelector('.profile-content-info-books-span')
-        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
         const book1 = document.getElementById('bookBuyBtn1')
         const book2 = document.getElementById('bookBuyBtn2')
         const book3 = document.getElementById('bookBuyBtn3')
@@ -234,6 +231,9 @@ buyBtn.forEach(button => {
         } else if(button == book1) {
             let name1 = document.getElementById('name1').innerHTML
             let author1 = document.getElementById('author1').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
             localStorage.setItem('name1',name1)
             localStorage.setItem('author1',author1)
             const nameAuthor1 = document.createTextNode(`${localStorage.getItem('name1') + ', ' + localStorage.getItem('author1').slice(3)}`)
@@ -248,7 +248,309 @@ buyBtn.forEach(button => {
             li.appendChild(nameAuthor1);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        }  
+        } else if(button == book2) {
+            let name2 = document.getElementById('name2').innerHTML
+            let author2 = document.getElementById('author2').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name2',name2)
+            localStorage.setItem('author2',author2)
+            const nameAuthor2 = document.createTextNode(`${localStorage.getItem('name2') + ', ' + localStorage.getItem('author2').slice(3)}`)
+            localStorage.setItem('nameAuthor2', nameAuthor2)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor2);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book3) {
+            let name3 = document.getElementById('name3').innerHTML
+            let author3 = document.getElementById('author3').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name3',name3)
+            localStorage.setItem('author3',author3)
+            const nameAuthor3 = document.createTextNode(`${localStorage.getItem('name3') + ', ' + localStorage.getItem('author3').slice(3)}`)
+            localStorage.setItem('nameAuthor3', nameAuthor3)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor3);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book4) {
+            let name4 = document.getElementById('name4').innerHTML
+            let author4 = document.getElementById('author4').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name4',name4)
+            localStorage.setItem('author4',author4)
+            const nameAuthor4 = document.createTextNode(`${localStorage.getItem('name4') + ', ' + localStorage.getItem('author4').slice(3)}`)
+            localStorage.setItem('nameAuthor4', nameAuthor4)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor4);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        }  else if(button == book5) {
+            let name5 = document.getElementById('name5').innerHTML
+            let author5 = document.getElementById('author5').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name5',name5)
+            localStorage.setItem('author5',author5)
+            const nameAuthor5 = document.createTextNode(`${localStorage.getItem('name5') + ', ' + localStorage.getItem('author5').slice(3)}`)
+            localStorage.setItem('nameAuthor5', nameAuthor5)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor5);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book6) {
+            let name6 = document.getElementById('name6').innerHTML
+            let author6 = document.getElementById('author6').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name6',name6)
+            localStorage.setItem('author6',author6)
+            const nameAuthor6 = document.createTextNode(`${localStorage.getItem('name6') + ', ' + localStorage.getItem('author6').slice(3)}`)
+            localStorage.setItem('nameAuthor6', nameAuthor6)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor6);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book7) {
+            let name7 = document.getElementById('name7').innerHTML
+            let author7 = document.getElementById('author7').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name7',name7)
+            localStorage.setItem('author7',author7)
+            const nameAuthor7 = document.createTextNode(`${localStorage.getItem('name7') + ', ' + localStorage.getItem('author7').slice(3)}`)
+            localStorage.setItem('nameAuthor7', nameAuthor7)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor7);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book8) {
+            let name8 = document.getElementById('name8').innerHTML
+            let author8 = document.getElementById('author8').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name8',name8)
+            localStorage.setItem('author8',author8)
+            const nameAuthor8 = document.createTextNode(`${localStorage.getItem('name8') + ', ' + localStorage.getItem('author8').slice(3)}`)
+            localStorage.setItem('nameAuthor8', nameAuthor8)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor8);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book9) {
+            let name9 = document.getElementById('name9').innerHTML
+            let author9 = document.getElementById('author9').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name9',name9)
+            localStorage.setItem('author9',author9)
+            const nameAuthor9 = document.createTextNode(`${localStorage.getItem('name9') + ', ' + localStorage.getItem('author9').slice(3)}`)
+            localStorage.setItem('nameAuthor9', nameAuthor9)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor9);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book10) {
+            let name10 = document.getElementById('name10').innerHTML
+            let author10 = document.getElementById('author10').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name10',name10)
+            localStorage.setItem('author10',author10)
+            const nameAuthor10 = document.createTextNode(`${localStorage.getItem('name10') + ', ' + localStorage.getItem('author10').slice(3)}`)
+            localStorage.setItem('nameAuthor10', nameAuthor10)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor10);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book11) {
+            let name11 = document.getElementById('name11').innerHTML
+            let author11 = document.getElementById('author11').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name11',name11)
+            localStorage.setItem('author11',author11)
+            const nameAuthor11 = document.createTextNode(`${localStorage.getItem('name11') + ', ' + localStorage.getItem('author11').slice(3)}`)
+            localStorage.setItem('nameAuthor11', nameAuthor11)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor11);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book12) {
+            let name12 = document.getElementById('name12').innerHTML
+            let author12 = document.getElementById('author12').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name12',name12)
+            localStorage.setItem('author12',author12)
+            const nameAuthor12 = document.createTextNode(`${localStorage.getItem('name12') + ', ' + localStorage.getItem('author12').slice(3)}`)
+            localStorage.setItem('nameAuthor12', nameAuthor12)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor12);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book13) {
+            let name13 = document.getElementById('name13').innerHTML
+            let author13 = document.getElementById('author13').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name13',name13)
+            localStorage.setItem('author13',author13)
+            const nameAuthor13 = document.createTextNode(`${localStorage.getItem('name13') + ', ' + localStorage.getItem('author13').slice(3)}`)
+            localStorage.setItem('nameAuthor13', nameAuthor13)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor13);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book14) {
+            let name14 = document.getElementById('name14').innerHTML
+            let author14 = document.getElementById('author14').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name14',name14)
+            localStorage.setItem('author14',author14)
+            const nameAuthor14 = document.createTextNode(`${localStorage.getItem('name14') + ', ' + localStorage.getItem('author14').slice(3)}`)
+            localStorage.setItem('nameAuthor14', nameAuthor14)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor14);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book15) {
+            let name15 = document.getElementById('name15').innerHTML
+            let author15 = document.getElementById('author15').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name15',name15)
+            localStorage.setItem('author15',author15)
+            const nameAuthor15 = document.createTextNode(`${localStorage.getItem('name15') + ', ' + localStorage.getItem('author15').slice(3)}`)
+            localStorage.setItem('nameAuthor15', nameAuthor15)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor15);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else if(button == book16) {
+            let name16 = document.getElementById('name16').innerHTML
+            let author16 = document.getElementById('author16').innerHTML
+            let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
+            localStorage.setItem('name16',name16)
+            localStorage.setItem('author16',author16)
+            const nameAuthor16 = document.createTextNode(`${localStorage.getItem('name16') + ', ' + localStorage.getItem('author16').slice(3)}`)
+            localStorage.setItem('nameAuthor16', nameAuthor16)
+            button.setAttribute('disabled','')
+            button.innerHTML = "Own"
+            books = +books;
+            books += 1;
+            localStorage.setItem('books',books);
+            booksCount.append(books);
+            booksCountCard.append(books);
+            li.appendChild(nameAuthor16);
+            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li);
+        } else { 
+            return 0;
+        }
     });
 });
 
@@ -336,9 +638,26 @@ logInBtn.addEventListener('click', () => {
     let storedMail = localStorage.getItem('email')
     let storedPass = localStorage.getItem('password')
     let storedNumb = localStorage.getItem('cardNumber')
-    let ul = document.querySelector('.profile-content-bookinfo-ul')
-    let li = document.createElement('li')
-    let nameAuthor1 = localStorage.getItem('nameAuthor1')
+    // let ul = document.querySelector('.profile-content-bookinfo-ul')
+    // let li = document.createElement('li')
+    // let nameAuthor1 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor2 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor3 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor4 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor5 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor6 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor7 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor8 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor9 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor10 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor11 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor12 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor13 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor14 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor15 = localStorage.getItem('nameAuthor1')
+    // let nameAuthor16 = localStorage.getItem('nameAuthor1')
+
+    
 
     let userEmail = document.getElementById('userEmail').value
     let userPassword = document.getElementById('userPassword').value
@@ -361,10 +680,17 @@ logInBtn.addEventListener('click', () => {
         let visitsCount = document.querySelector('.profile-content-info-visits-span')
         let visitsCountCard = document.querySelector('.cards-item-find-border-profile-visits-span')
         let letName = document.createTextNode(`${firstNameLetter + lastNameLetter}`);
-        
+        let books = localStorage.getItem('books')
+        let booksCount = document.querySelector('.profile-content-info-books-span')
+        let booksCountCard = document.querySelector('.cards-item-find-border-profile-books-span')
         
         visits = +visits;
         visits += 1;
+
+        
+        
+        booksCount.append(books);
+        booksCountCard.append(books);
 
         localStorage.setItem('visits',visits)
 
@@ -388,14 +714,123 @@ logInBtn.addEventListener('click', () => {
         chkCardBtn.classList.add('disabled')
         readInfo.classList.add('active')
 
-        if(nameAuthor1 !== undefined){
-            const bookBtn1 = document.getElementById('bookBuyBtn1');
-            bookBtn1.setAttribute('disabled','');
-            bookBtn1.innerHTML = "Own";
-            li.appendChild(nameAuthor1);
-            li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-            ul.appendChild(li);
-        }
+        // if(nameAuthor1 != null){
+        //     const bookBtn1 = document.getElementById('bookBuyBtn1');
+        //     bookBtn1.setAttribute('disabled','');
+        //     bookBtn1.innerHTML = "Own";
+        //     li.appendChild(nameAuthor1);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor2 != null){
+        //     const bookBtn2 = document.getElementById('bookBuyBtn1');
+        //     bookBtn2.setAttribute('disabled','');
+        //     bookBtn2.innerHTML = "Own";
+        //     li.appendChild(nameAuthor2);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor3 != null){
+        //     const bookBtn3 = document.getElementById('bookBuyBtn1');
+        //     bookBtn3.setAttribute('disabled','');
+        //     bookBtn3.innerHTML = "Own";
+        //     li.appendChild(nameAuthor3);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor4 != null){
+        //     const bookBtn4 = document.getElementById('bookBuyBtn1');
+        //     bookBtn4.setAttribute('disabled','');
+        //     bookBtn4.innerHTML = "Own";
+        //     li.appendChild(nameAuthor4);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor5 != null){
+        //     const bookBtn5 = document.getElementById('bookBuyBtn1');
+        //     bookBtn5.setAttribute('disabled','');
+        //     bookBtn5.innerHTML = "Own";
+        //     li.appendChild(nameAuthor5);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor6 != null){
+        //     const bookBtn6 = document.getElementById('bookBuyBtn1');
+        //     bookBtn6.setAttribute('disabled','');
+        //     bookBtn6.innerHTML = "Own";
+        //     li.appendChild(nameAuthor6);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor7 != null){
+        //     const bookBtn7 = document.getElementById('bookBuyBtn1');
+        //     bookBtn7.setAttribute('disabled','');
+        //     bookBtn7.innerHTML = "Own";
+        //     li.appendChild(nameAuthor7);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor8 != null){
+        //     const bookBtn8 = document.getElementById('bookBuyBtn1');
+        //     bookBtn8.setAttribute('disabled','');
+        //     bookBtn8.innerHTML = "Own";
+        //     li.appendChild(nameAuthor8);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor9 != null){
+        //     const bookBtn9 = document.getElementById('bookBuyBtn1');
+        //     bookBtn9.setAttribute('disabled','');
+        //     bookBtn9.innerHTML = "Own";
+        //     li.appendChild(nameAuthor9);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor10 != null){
+        //     const bookBtn10 = document.getElementById('bookBuyBtn1');
+        //     bookBtn10.setAttribute('disabled','');
+        //     bookBtn10.innerHTML = "Own";
+        //     li.appendChild(nameAuthor10);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor11 != null){
+        //     const bookBtn11 = document.getElementById('bookBuyBtn1');
+        //     bookBtn11.setAttribute('disabled','');
+        //     bookBtn11.innerHTML = "Own";
+        //     li.appendChild(nameAuthor11);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor12 != null){
+        //     const bookBtn12 = document.getElementById('bookBuyBtn1');
+        //     bookBtn12.setAttribute('disabled','');
+        //     bookBtn12.innerHTML = "Own";
+        //     li.appendChild(nameAuthor12);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor13 != null){
+        //     const bookBtn13 = document.getElementById('bookBuyBtn1');
+        //     bookBtn13.setAttribute('disabled','');
+        //     bookBtn13.innerHTML = "Own";
+        //     li.appendChild(nameAuthor13);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor14 != null){
+        //     const bookBtn14 = document.getElementById('bookBuyBtn1');
+        //     bookBtn14.setAttribute('disabled','');
+        //     bookBtn14.innerHTML = "Own";
+        //     li.appendChild(nameAuthor14);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor15 != null){
+        //     const bookBtn15 = document.getElementById('bookBuyBtn1');
+        //     bookBtn15.setAttribute('disabled','');
+        //     bookBtn15.innerHTML = "Own";
+        //     li.appendChild(nameAuthor15);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else if (nameAuthor16 != null){
+        //     const bookBtn16 = document.getElementById('bookBuyBtn1');
+        //     bookBtn16.setAttribute('disabled','');
+        //     bookBtn16.innerHTML = "Own";
+        //     li.appendChild(nameAuthor16);
+        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
+        //     ul.appendChild(li);
+        // } else {
+        //     return 0;
+        // }
+
+        
 
 
     } else {
