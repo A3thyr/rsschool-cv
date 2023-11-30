@@ -460,6 +460,9 @@
                     position: absolute;
                     top: 0;
                     margin-top: 31px;
+                    &-icon{
+                        display: none;
+                    }
                     &-exit{
                         border: none;
                         background-color:#000;

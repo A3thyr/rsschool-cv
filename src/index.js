@@ -29,8 +29,8 @@ if (menu && menuBtn && menuBtnClose){
 
 //carousel
 
-const slides = document.querySelector('.about-img-img1')
-const wrapper = document.querySelector('.about-img')
+const slides = document.querySelector('.about-img-cont-wrap-img1')
+const wrapper = document.querySelector('.about-img-cont-wrap')
 
 let curSlide = 0;
 let maxSlide = slides.length - 1;
@@ -39,6 +39,7 @@ let maxSlide = slides.length - 1;
 const nextSlide = document.querySelector('.about-img-arrowright')
 const prevSlide = document.querySelector('.about-img-arrowleft')
 const owlBtnDesk = document.querySelector('.about-ping-ul')
+const owlBtnTblt = document.querySelector('.about-pingtablet-ul')
 
 owlBtnDesk.addEventListener('click', e =>{
     if (e.target.nodeName === 'LI'){
@@ -49,10 +50,34 @@ owlBtnDesk.addEventListener('click', e =>{
             wrapper.style.transform = "translateX(-0%)";
             e.target.classList.add('active');
         } else if (e.target.id === 'second') {
-            wrapper.style.transform = "translateX(-34%)";
+            wrapper.style.transform = "translateX(-20%)";
             e.target.classList.add('active');
         } else if (e.target.id === 'third') {
-            wrapper.style.transform = "translateX(-68%)";
+            wrapper.style.transform = "translateX(-41%)";
+            e.target.classList.add('active'); 
+        }
+    }
+});
+
+owlBtnTblt.addEventListener('click', e =>{
+    if (e.target.nodeName === 'LI'){
+        Array.from(owlBtnTblt.children).forEach(item => 
+            item.classList.remove('active')    
+        );
+        if (e.target.id === 'first'){
+            wrapper.style.transform = "translateX(-0%)";
+            e.target.classList.add('active');
+        } else if (e.target.id === 'second') {
+            wrapper.style.transform = "translateX(-20.5%)";
+            e.target.classList.add('active');
+        } else if (e.target.id === 'third') {
+            wrapper.style.transform = "translateX(-40.5%)";
+            e.target.classList.add('active'); 
+        } else if (e.target.id === 'fourth') {
+            wrapper.style.transform = "translateX(-60.5%)";
+            e.target.classList.add('active');
+        } else if (e.target.id === 'fifth') {
+            wrapper.style.transform = "translateX(-81%)";
             e.target.classList.add('active'); 
         }
     }
@@ -228,7 +253,7 @@ buyBtn.forEach(button => {
         if ((document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active')) && validCard == undefined){ 
             buyCardMenu.classList.toggle('active')
             overlay.classList.toggle('active')
-        } else if(button == book1) {
+        } else if(button == book1 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name1 = document.getElementById('name1').innerHTML
             let author1 = document.getElementById('author1').innerHTML
             let books = localStorage.getItem('books')
@@ -243,12 +268,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor1);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book2) {
+        } else if(button == book2 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name2 = document.getElementById('name2').innerHTML
             let author2 = document.getElementById('author2').innerHTML
             let books = localStorage.getItem('books')
@@ -263,12 +288,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor2);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book3) {
+        } else if(button == book3 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name3 = document.getElementById('name3').innerHTML
             let author3 = document.getElementById('author3').innerHTML
             let books = localStorage.getItem('books')
@@ -283,12 +308,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor3);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book4) {
+        } else if(button == book4 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name4 = document.getElementById('name4').innerHTML
             let author4 = document.getElementById('author4').innerHTML
             let books = localStorage.getItem('books')
@@ -303,12 +328,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor4);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        }  else if(button == book5) {
+        }  else if(button == book5 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name5 = document.getElementById('name5').innerHTML
             let author5 = document.getElementById('author5').innerHTML
             let books = localStorage.getItem('books')
@@ -323,12 +348,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor5);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book6) {
+        } else if(button == book6 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name6 = document.getElementById('name6').innerHTML
             let author6 = document.getElementById('author6').innerHTML
             let books = localStorage.getItem('books')
@@ -343,12 +368,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor6);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book7) {
+        } else if(button == book7 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name7 = document.getElementById('name7').innerHTML
             let author7 = document.getElementById('author7').innerHTML
             let books = localStorage.getItem('books')
@@ -363,12 +388,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor7);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book8) {
+        } else if(button == book8 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name8 = document.getElementById('name8').innerHTML
             let author8 = document.getElementById('author8').innerHTML
             let books = localStorage.getItem('books')
@@ -383,12 +408,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor8);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book9) {
+        } else if(button == book9 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name9 = document.getElementById('name9').innerHTML
             let author9 = document.getElementById('author9').innerHTML
             let books = localStorage.getItem('books')
@@ -403,12 +428,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor9);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book10) {
+        } else if(button == book10 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name10 = document.getElementById('name10').innerHTML
             let author10 = document.getElementById('author10').innerHTML
             let books = localStorage.getItem('books')
@@ -423,12 +448,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor10);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book11) {
+        } else if(button == book11 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name11 = document.getElementById('name11').innerHTML
             let author11 = document.getElementById('author11').innerHTML
             let books = localStorage.getItem('books')
@@ -443,12 +468,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor11);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book12) {
+        } else if(button == book12 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name12 = document.getElementById('name12').innerHTML
             let author12 = document.getElementById('author12').innerHTML
             let books = localStorage.getItem('books')
@@ -463,12 +488,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor12);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book13) {
+        } else if(button == book13 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name13 = document.getElementById('name13').innerHTML
             let author13 = document.getElementById('author13').innerHTML
             let books = localStorage.getItem('books')
@@ -483,12 +508,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor13);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book14) {
+        } else if(button == book14 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name14 = document.getElementById('name14').innerHTML
             let author14 = document.getElementById('author14').innerHTML
             let books = localStorage.getItem('books')
@@ -503,12 +528,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor14);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book15) {
+        } else if(button == book15 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name15 = document.getElementById('name15').innerHTML
             let author15 = document.getElementById('author15').innerHTML
             let books = localStorage.getItem('books')
@@ -523,12 +548,12 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor15);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
-        } else if(button == book16) {
+        } else if(button == book16 && (document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))) {
             let name16 = document.getElementById('name16').innerHTML
             let author16 = document.getElementById('author16').innerHTML
             let books = localStorage.getItem('books')
@@ -543,8 +568,8 @@ buyBtn.forEach(button => {
             books = +books;
             books += 1;
             localStorage.setItem('books',books);
-            booksCount.append(books);
-            booksCountCard.append(books);
+            booksCount.innerHTML = books;
+            booksCountCard.innerHTML = books;
             li.appendChild(nameAuthor16);
             li.setAttribute('class', 'profile-content-bookinfo-ul-li');
             ul.appendChild(li);
@@ -638,24 +663,39 @@ logInBtn.addEventListener('click', () => {
     let storedMail = localStorage.getItem('email')
     let storedPass = localStorage.getItem('password')
     let storedNumb = localStorage.getItem('cardNumber')
-    // let ul = document.querySelector('.profile-content-bookinfo-ul')
-    // let li = document.createElement('li')
-    // let nameAuthor1 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor2 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor3 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor4 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor5 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor6 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor7 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor8 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor9 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor10 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor11 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor12 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor13 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor14 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor15 = localStorage.getItem('nameAuthor1')
-    // let nameAuthor16 = localStorage.getItem('nameAuthor1')
+    let ul = document.querySelector('.profile-content-bookinfo-ul')
+    let li1 = document.createElement('li')
+    let li2 = document.createElement('li')
+    let li3 = document.createElement('li')
+    let li4 = document.createElement('li')
+    let li5 = document.createElement('li')
+    let li6 = document.createElement('li')
+    let li7 = document.createElement('li')
+    let li8 = document.createElement('li')
+    let li9 = document.createElement('li')
+    let li10 = document.createElement('li')
+    let li11 = document.createElement('li')
+    let li12 = document.createElement('li')
+    let li13 = document.createElement('li')
+    let li14 = document.createElement('li')
+    let li15 = document.createElement('li')
+    let li16 = document.createElement('li')
+    let nameAuthor1 = localStorage.getItem('nameAuthor1')
+    let nameAuthor2 = localStorage.getItem('nameAuthor2')
+    let nameAuthor3 = localStorage.getItem('nameAuthor3')
+    let nameAuthor4 = localStorage.getItem('nameAuthor4')
+    let nameAuthor5 = localStorage.getItem('nameAuthor5')
+    let nameAuthor6 = localStorage.getItem('nameAuthor6')
+    let nameAuthor7 = localStorage.getItem('nameAuthor7')
+    let nameAuthor8 = localStorage.getItem('nameAuthor8')
+    let nameAuthor9 = localStorage.getItem('nameAuthor9')
+    let nameAuthor10 = localStorage.getItem('nameAuthor10')
+    let nameAuthor11 = localStorage.getItem('nameAuthor11')
+    let nameAuthor12 = localStorage.getItem('nameAuthor12')
+    let nameAuthor13 = localStorage.getItem('nameAuthor13')
+    let nameAuthor14 = localStorage.getItem('nameAuthor14')
+    let nameAuthor15 = localStorage.getItem('nameAuthor15')
+    let nameAuthor16 = localStorage.getItem('nameAuthor16')
 
     
 
@@ -711,127 +751,140 @@ logInBtn.addEventListener('click', () => {
         
         document.getElementById('firstName').value = readName;
         document.getElementById('cardNumber').value = storedNumb;
+        document.getElementById('firstName').setAttribute('disabled','')
+        document.getElementById('cardNumber').setAttribute('disabled','')
         chkCardBtn.classList.add('disabled')
         readInfo.classList.add('active')
 
-        // if(nameAuthor1 != null){
-        //     const bookBtn1 = document.getElementById('bookBuyBtn1');
-        //     bookBtn1.setAttribute('disabled','');
-        //     bookBtn1.innerHTML = "Own";
-        //     li.appendChild(nameAuthor1);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor2 != null){
-        //     const bookBtn2 = document.getElementById('bookBuyBtn1');
-        //     bookBtn2.setAttribute('disabled','');
-        //     bookBtn2.innerHTML = "Own";
-        //     li.appendChild(nameAuthor2);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor3 != null){
-        //     const bookBtn3 = document.getElementById('bookBuyBtn1');
-        //     bookBtn3.setAttribute('disabled','');
-        //     bookBtn3.innerHTML = "Own";
-        //     li.appendChild(nameAuthor3);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor4 != null){
-        //     const bookBtn4 = document.getElementById('bookBuyBtn1');
-        //     bookBtn4.setAttribute('disabled','');
-        //     bookBtn4.innerHTML = "Own";
-        //     li.appendChild(nameAuthor4);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor5 != null){
-        //     const bookBtn5 = document.getElementById('bookBuyBtn1');
-        //     bookBtn5.setAttribute('disabled','');
-        //     bookBtn5.innerHTML = "Own";
-        //     li.appendChild(nameAuthor5);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor6 != null){
-        //     const bookBtn6 = document.getElementById('bookBuyBtn1');
-        //     bookBtn6.setAttribute('disabled','');
-        //     bookBtn6.innerHTML = "Own";
-        //     li.appendChild(nameAuthor6);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor7 != null){
-        //     const bookBtn7 = document.getElementById('bookBuyBtn1');
-        //     bookBtn7.setAttribute('disabled','');
-        //     bookBtn7.innerHTML = "Own";
-        //     li.appendChild(nameAuthor7);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor8 != null){
-        //     const bookBtn8 = document.getElementById('bookBuyBtn1');
-        //     bookBtn8.setAttribute('disabled','');
-        //     bookBtn8.innerHTML = "Own";
-        //     li.appendChild(nameAuthor8);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor9 != null){
-        //     const bookBtn9 = document.getElementById('bookBuyBtn1');
-        //     bookBtn9.setAttribute('disabled','');
-        //     bookBtn9.innerHTML = "Own";
-        //     li.appendChild(nameAuthor9);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor10 != null){
-        //     const bookBtn10 = document.getElementById('bookBuyBtn1');
-        //     bookBtn10.setAttribute('disabled','');
-        //     bookBtn10.innerHTML = "Own";
-        //     li.appendChild(nameAuthor10);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor11 != null){
-        //     const bookBtn11 = document.getElementById('bookBuyBtn1');
-        //     bookBtn11.setAttribute('disabled','');
-        //     bookBtn11.innerHTML = "Own";
-        //     li.appendChild(nameAuthor11);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor12 != null){
-        //     const bookBtn12 = document.getElementById('bookBuyBtn1');
-        //     bookBtn12.setAttribute('disabled','');
-        //     bookBtn12.innerHTML = "Own";
-        //     li.appendChild(nameAuthor12);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor13 != null){
-        //     const bookBtn13 = document.getElementById('bookBuyBtn1');
-        //     bookBtn13.setAttribute('disabled','');
-        //     bookBtn13.innerHTML = "Own";
-        //     li.appendChild(nameAuthor13);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor14 != null){
-        //     const bookBtn14 = document.getElementById('bookBuyBtn1');
-        //     bookBtn14.setAttribute('disabled','');
-        //     bookBtn14.innerHTML = "Own";
-        //     li.appendChild(nameAuthor14);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor15 != null){
-        //     const bookBtn15 = document.getElementById('bookBuyBtn1');
-        //     bookBtn15.setAttribute('disabled','');
-        //     bookBtn15.innerHTML = "Own";
-        //     li.appendChild(nameAuthor15);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else if (nameAuthor16 != null){
-        //     const bookBtn16 = document.getElementById('bookBuyBtn1');
-        //     bookBtn16.setAttribute('disabled','');
-        //     bookBtn16.innerHTML = "Own";
-        //     li.appendChild(nameAuthor16);
-        //     li.setAttribute('class', 'profile-content-bookinfo-ul-li');
-        //     ul.appendChild(li);
-        // } else {
-        //     return 0;
-        // }
-
-        
-
+        if(nameAuthor1 != null){
+            const bookBtn1 = document.getElementById('bookBuyBtn1');
+            bookBtn1.setAttribute('disabled','');
+            bookBtn1.innerHTML = "Own";
+            nameAuthor1 = document.createTextNode(`${localStorage.getItem('name1') + ', ' + localStorage.getItem('author1').slice(3)}`)
+            li1.appendChild(nameAuthor1);
+            li1.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li1);
+        }  if (nameAuthor2 != null){
+            const bookBtn2 = document.getElementById('bookBuyBtn2');
+            bookBtn2.setAttribute('disabled','');
+            bookBtn2.innerHTML = "Own";
+            nameAuthor2 = document.createTextNode(`${localStorage.getItem('name2') + ', ' + localStorage.getItem('author2').slice(3)}`)
+            li2.appendChild(nameAuthor2);
+            li2.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li2);
+        }  if (nameAuthor3 != null){
+            const bookBtn3 = document.getElementById('bookBuyBtn3');
+            bookBtn3.setAttribute('disabled','');
+            bookBtn3.innerHTML = "Own";
+            nameAuthor3 = document.createTextNode(`${localStorage.getItem('name3') + ', ' + localStorage.getItem('author3').slice(3)}`)
+            li3.appendChild(nameAuthor3);
+            li3.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li3);
+        }  if (nameAuthor4 != null){
+            const bookBtn4 = document.getElementById('bookBuyBtn4');
+            bookBtn4.setAttribute('disabled','');
+            bookBtn4.innerHTML = "Own";
+            nameAuthor4 = document.createTextNode(`${localStorage.getItem('name4') + ', ' + localStorage.getItem('author4').slice(3)}`)
+            li4.appendChild(nameAuthor4);
+            li4.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li4);
+        }  if (nameAuthor5 != null){
+            const bookBtn5 = document.getElementById('bookBuyBtn5');
+            bookBtn5.setAttribute('disabled','');
+            bookBtn5.innerHTML = "Own";
+            nameAuthor5 = document.createTextNode(`${localStorage.getItem('name5') + ', ' + localStorage.getItem('author5').slice(3)}`)
+            li5.appendChild(nameAuthor5);
+            li5.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li5);
+        }  if (nameAuthor6 != null){
+            const bookBtn6 = document.getElementById('bookBuyBtn6');
+            bookBtn6.setAttribute('disabled','');
+            bookBtn6.innerHTML = "Own";
+            nameAuthor6 = document.createTextNode(`${localStorage.getItem('name6') + ', ' + localStorage.getItem('author6').slice(3)}`)
+            li6.appendChild(nameAuthor6);
+            li6.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li6);
+        }  if (nameAuthor7 != null){
+            const bookBtn7 = document.getElementById('bookBuyBtn7');
+            bookBtn7.setAttribute('disabled','');
+            bookBtn7.innerHTML = "Own";
+            nameAuthor7 = document.createTextNode(`${localStorage.getItem('name7') + ', ' + localStorage.getItem('author7').slice(3)}`)
+            li7.appendChild(nameAuthor7);
+            li7.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li7);
+        }  if (nameAuthor8 != null){
+            const bookBtn8 = document.getElementById('bookBuyBtn8');
+            bookBtn8.setAttribute('disabled','');
+            bookBtn8.innerHTML = "Own";
+            nameAuthor8 = document.createTextNode(`${localStorage.getItem('name8') + ', ' + localStorage.getItem('author8').slice(3)}`)
+            li8.appendChild(nameAuthor8);
+            li8.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li8);
+        }  if (nameAuthor9 != null){
+            const bookBtn9 = document.getElementById('bookBuyBtn9');
+            bookBtn9.setAttribute('disabled','');
+            bookBtn9.innerHTML = "Own";
+            nameAuthor9 = document.createTextNode(`${localStorage.getItem('name9') + ', ' + localStorage.getItem('author9').slice(3)}`)
+            li9.appendChild(nameAuthor9);
+            li9.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li9);
+        }  if (nameAuthor10 != null){
+            const bookBtn10 = document.getElementById('bookBuyBtn10');
+            bookBtn10.setAttribute('disabled','');
+            bookBtn10.innerHTML = "Own";
+            nameAuthor10 = document.createTextNode(`${localStorage.getItem('name10') + ', ' + localStorage.getItem('author10').slice(3)}`)
+            li10.appendChild(nameAuthor10);
+            li10.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li10);
+        }  if (nameAuthor11 != null){
+            const bookBtn11 = document.getElementById('bookBuyBtn11');
+            bookBtn11.setAttribute('disabled','');
+            bookBtn11.innerHTML = "Own";
+            nameAuthor11 = document.createTextNode(`${localStorage.getItem('name11') + ', ' + localStorage.getItem('author11').slice(3)}`)
+            li11.appendChild(nameAuthor11);
+            li11.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li11);
+        }  if (nameAuthor12 != null){
+            const bookBtn12 = document.getElementById('bookBuyBtn12');
+            bookBtn12.setAttribute('disabled','');
+            bookBtn12.innerHTML = "Own";
+            nameAuthor12 = document.createTextNode(`${localStorage.getItem('name12') + ', ' + localStorage.getItem('author12').slice(3)}`)
+            li12.appendChild(nameAuthor12);
+            li12.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li12);
+        }  if (nameAuthor13 != null){
+            const bookBtn13 = document.getElementById('bookBuyBtn13');
+            bookBtn13.setAttribute('disabled','');
+            bookBtn13.innerHTML = "Own";
+            nameAuthor13 = document.createTextNode(`${localStorage.getItem('name13') + ', ' + localStorage.getItem('author13').slice(3)}`)
+            li13.appendChild(nameAuthor13);
+            li13.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li13);
+        }  if (nameAuthor14 != null){
+            const bookBtn14 = document.getElementById('bookBuyBtn14');
+            bookBtn14.setAttribute('disabled','');
+            bookBtn14.innerHTML = "Own";
+            nameAuthor14 = document.createTextNode(`${localStorage.getItem('name14') + ', ' + localStorage.getItem('author14').slice(3)}`)
+            li14.appendChild(nameAuthor14);
+            li14.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li14);
+        }  if (nameAuthor15 != null){
+            const bookBtn15 = document.getElementById('bookBuyBtn15');
+            bookBtn15.setAttribute('disabled','');
+            bookBtn15.innerHTML = "Own";
+            nameAuthor15 = document.createTextNode(`${localStorage.getItem('name15') + ', ' + localStorage.getItem('author15').slice(3)}`)
+            li15.appendChild(nameAuthor15);
+            li15.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li15);
+        }  if (nameAuthor16 != null){
+            const bookBtn16 = document.getElementById('bookBuyBtn16');
+            bookBtn16.setAttribute('disabled','');
+            bookBtn16.innerHTML = "Own";
+            nameAuthor16 = document.createTextNode(`${localStorage.getItem('name16') + ', ' + localStorage.getItem('author16').slice(3)}`)
+            li16.appendChild(nameAuthor16);
+            li16.setAttribute('class', 'profile-content-bookinfo-ul-li');
+            ul.appendChild(li16);
+        } 
 
     } else {
         alert("Incorrect e-mail/card number or password")
