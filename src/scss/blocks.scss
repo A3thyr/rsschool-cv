@@ -55,6 +55,9 @@ html, body{
     transition: 0.6s;
     opacity: 0;
     visibility: hidden;
+    &.disabled{
+        display: none;
+    }
     &.active{
         transition: 0.6s;
         opacity: 1;
@@ -315,6 +318,9 @@ html, body{
     opacity: 0;
     visibility: hidden;
     transition: 0.6s;
+    &.disabled{
+        display: none;
+    }
     &.active{
         opacity: 1;
         visibility: visible;

@@ -10,16 +10,19 @@ if (menu && menuBtn && menuBtnClose){
     menuBtn.addEventListener('click', () =>{
         menu.classList.toggle('active')
         menuBtn.classList.toggle('active')
+        overlay.classList.toggle('active')
     })
     menuBtnClose.addEventListener('click', () =>{
         menu.classList.toggle('active')
         menuBtnClose.classList.toggle('active')
+        overlay.classList.toggle('active')
     })
 
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.toggle('active')
             menuBtnClose.classList.toggle('active')
+            overlay.classList.toggle('active')
         })
     })
 }
@@ -191,11 +194,11 @@ const profMenuCls = document.querySelector('.profile-content-clsbtn')
 const buyCardMenuClsBtn = document.querySelector('.buycardmenu-top-clsbtn')
 const cardLogBtn = document.getElementById('cardLogIn')
 const buyBtn = document.querySelectorAll('.favorites-books-border-book-button')
-const buyBook = document.getElementById('bookBuyBtn')
 const overlay = document.querySelector('.overlay')
 
 regBtn.addEventListener('click', () => {
     regMenu.classList.toggle('active')
+    regMenu.classList.remove('disabled')
     overlay.classList.toggle('active')
     iconMenu.classList.remove('active')
 });
@@ -615,8 +618,10 @@ overlay.addEventListener('click', () => {
     buyCardMenu.classList.remove('active')
     loginMenu.classList.remove('active')
     profMenu.classList.remove('active')
+    menu.classList.remove('active')
     overlay.classList.remove('active')
 });
+
 
 
 // < ========================================================== >
@@ -919,9 +924,14 @@ chkCardBtn.addEventListener('click', () =>{
 
     let readCard = document.getElementById('cardNumber').value
     let readName = document.getElementById('firstName').value
-
+    
+    let visitsCountCard = document.querySelector('.cards-item-find-border-profile-visits-span')
+    let booksCount = document.querySelector('.cards-item-find-border-profile-books-span')
+ 
     if (readCard == storedNumb && readName == storedName && !(document.querySelector('.header-nav-logbtn-icon-namedbtn').classList.contains('active'))){
         chkCardBtn.classList.add('disabled')
+        visitsCountCard.innerHTML = localStorage.getItem('visits')
+        booksCount.innerHTML = localStorage.getItem('books')
         readInfo.classList.add('active')
     }
 

@@ -111,6 +111,7 @@
                     line-height: 20px; /* 133.333% */
                 }
                 &-line{
+                    z-index: 3;
                     width: 40px;
                     height: 1px;
                     background: #BB945F;
@@ -188,6 +189,9 @@
                 transition: 0.6s;
                 overflow: auto;
                 z-index: 3;
+                &.disabled{
+                    display: none;
+                }
                 &.active{
                     opacity: 1;
                     visibility: visible;
@@ -311,6 +315,9 @@
                 overflow: auto;
                 transition: 0.6s;
                 z-index: 3;
+                &.disabled{
+                    display: none;
+                }
                 &.active{
                     opacity: 1;
                     visibility: visible;
@@ -426,7 +433,7 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        
+        align-items: center;
         &-nav{
             display: flex;
             flex-direction: row;
@@ -447,6 +454,7 @@
                 height: 570px;
                 background-color: #000;
                 transition: all 0.4s;
+                z-index: 3;
                 &.active{
                     right: 0;
                 }
@@ -509,8 +517,12 @@
                     }
                 }
                 &-icon{
-                    margin-top: 4px;           
+                    margin-top: 0px;           
                 }  
+                &-menu{
+                    margin-top: 160px;
+                    margin-left: 13px;
+                }
             }
         }
     }
