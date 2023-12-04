@@ -1,0 +1,53 @@
+/*!********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \********************************************************************************************************************************************************************************/
+html, body {
+  color: rgba(255, 255, 255, 0.7019607843);
+  width: 1440px;
+  flex-shrink: 0;
+}
+
+header {
+  width: 1440px;
+  height: 90px;
+  background-color: rgba(242, 120, 92, 0.6980392157);
+  box-shadow: 0px 4px 4px 0px rgba(13, 96, 111, 0.5019607843);
+}
+
+.nav_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Magra";
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 42px;
+}
+.navigation li {
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.log-in {
+  display: flex;
+  width: 103px;
+  padding: 10px 229px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #0D606F;
+  color: #fff;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 500;
+}

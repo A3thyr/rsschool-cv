@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Magra
+- Font Author: Copyright (c) 2011, FontFuror (info@fontfuror), with Reserved Names "Magra" "Magra Pro"
+- Font Source: http://fonts.gstatic.com/s/magra/v14/uK_94ruaZus72k5xIDMfO-ed.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

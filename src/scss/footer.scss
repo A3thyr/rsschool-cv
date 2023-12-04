@@ -1,0 +1,23 @@
+.page_footer {
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 19px;
+    margin-left: 560px;
+    margin-right: 123px;
+}
+.footer_sign {
+    
+    color: #FFF;
+    font-family: 'Red Hat Text';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer_social_icon {
+    margin-left: 328px;
+    gap: 20px;
+}
