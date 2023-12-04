@@ -223,6 +223,8 @@ const profMenuCls = document.querySelector('.profile-content-clsbtn')
 const buyCardMenuClsBtn = document.querySelector('.buycardmenu-top-clsbtn')
 const cardLogBtn = document.getElementById('cardLogIn')
 const buyBtn = document.querySelectorAll('.favorites-books-border-book-button')
+const logMenuRegBtn = document.querySelector('.header-nav-logbtn-logmodal-forms-btmtext-login')
+const regMenuLogBtn = document.querySelector('.header-nav-logbtn-regmodal-forms-btmtext-login')
 const overlay = document.querySelector('.overlay')
 
 regBtn.addEventListener('click', () => {
@@ -246,6 +248,16 @@ loginBtn.addEventListener('click', () => {
 loginClsBtn.addEventListener('click', () => {
     loginMenu.classList.remove('active')
     overlay.classList.remove('active')
+});
+
+logMenuRegBtn.addEventListener('click', () =>{
+    loginMenu.classList.remove('active')
+    regMenu.classList.toggle('active')
+});
+
+regMenuLogBtn.addEventListener('click', () => {
+    regMenu.classList.remove('active')
+    loginMenu.classList.toggle('active')
 });
 
 buyBtn.forEach(button => {
