@@ -20,26 +20,26 @@
             box-shadow: 0px 4px 4px 0px #0D606F;
         }
         &-span{
-            margin-left: 40px;
-            color: #0D606F;
-            font-family: Aleo;
-            font-size: 35px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
+                margin-left: 40px;
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
         &-lorem{
             margin-top: 24px;
-            margin-left: 40px;
-            width: 780px;
-            height: 184px;
-            color: #0D606F;
-            font-family: Aleo;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
+                margin-left: 40px;
+                width: 780px;
+                height: 184px;
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
         &-readmore{
                 margin-top: -40px;
                 margin-left: 40px;
@@ -73,7 +73,7 @@
 }
 .bck_layer{
     position: absolute;
-    width: 100%;
+    width: 1445px;
     height: 1270px;
     flex-shrink: 0;
     background: rgba(255, 255, 255, 0.70);
