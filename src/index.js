@@ -32,17 +32,57 @@ if (menu && menuBtn && menuBtnClose){
 
 //carousel
 
-const slides = document.querySelector('.about-img-cont-wrap-img1')
 const wrapper = document.querySelector('.about-img-cont-wrap')
 
-let curSlide = 0;
-let maxSlide = slides.length - 1;
+const slides = [...wrapper.children]
 
+let slideWidth = slides[0].getBoundingClientRect().width + 475
+
+function positionSlides(slides){
+    for(let index = 0; index < slides.length; index++){
+        slides[index].style.left = slideWidth * index + "px";
+    }
+}
+
+positionSlides(slides);
+
+function moveToSlide(wrapper, currentSlide, targetSlide){
+    const position = targetSlide.style.left;
+    wrapper.style.transform = `translateX(-${position})`;
+    toggleActive(currentSlide, targetSlide);
+}
+
+function toggleActive(current, target){
+    current.classList.remove('active');
+    target.classList.add('active');
+}
+
+function hideButton(targetSlide, slides){
+    if(targetSlide === slides[0]){
+        prevSlide.classList.add('hidden');
+        nextSlide.classList.remove('hidden');
+    } else if (targetSlide === slides[slides.length - 1]){
+        nextSlide.classList.add('hidden');
+        prevSlide.classList.remove('hidden');
+    } else {
+        prevSlide.classList.remove('hidden');
+        nextSlide.classList.remove('hidden');
+    }
+}
+
+function findIndex(item, items){
+    for(let index = 0; index < items.length; index++){
+        if(item === items[index]){
+            return index;
+        }
+    }
+}
 
 const nextSlide = document.querySelector('.about-img-arrowright')
 const prevSlide = document.querySelector('.about-img-arrowleft')
 const owlBtnDesk = document.querySelector('.about-ping-ul')
 const owlBtnTblt = document.querySelector('.about-pingtablet-ul')
+const tabletDots = [...owlBtnTblt.children]
 
 owlBtnDesk.addEventListener('click', e =>{
     if (e.target.nodeName === 'LI'){
@@ -50,67 +90,56 @@ owlBtnDesk.addEventListener('click', e =>{
             item.classList.remove('active')    
         );
         if (e.target.id === 'first'){
-            wrapper.style.transform = "translateX(-0%)";
+            wrapper.style.transform = `translateX(-${0}px)`;
             e.target.classList.add('active');
         } else if (e.target.id === 'second') {
-            wrapper.style.transform = "translateX(-20%)";
+            wrapper.style.transform = `translateX(-${475}px)`;
             e.target.classList.add('active');
         } else if (e.target.id === 'third') {
-            wrapper.style.transform = "translateX(-41%)";
+            wrapper.style.transform = `translateX(-${950}px)`;
             e.target.classList.add('active'); 
         }
     }
 });
 
 owlBtnTblt.addEventListener('click', e =>{
-    if (e.target.nodeName === 'LI'){
-        Array.from(owlBtnTblt.children).forEach(item => 
-            item.classList.remove('active')    
-        );
-        if (e.target.id === 'first'){
-            wrapper.style.transform = "translateX(-0%)";
-            e.target.classList.add('active');
-        } else if (e.target.id === 'second') {
-            wrapper.style.transform = "translateX(-20.5%)";
-            e.target.classList.add('active');
-        } else if (e.target.id === 'third') {
-            wrapper.style.transform = "translateX(-40.5%)";
-            e.target.classList.add('active'); 
-        } else if (e.target.id === 'fourth') {
-            wrapper.style.transform = "translateX(-60.5%)";
-            e.target.classList.add('active');
-        } else if (e.target.id === 'fifth') {
-            wrapper.style.transform = "translateX(-81%)";
-            e.target.classList.add('active'); 
-        }
-    }
+    const targetDot = e.target;
+    const currentSlide = wrapper.querySelector('.active');
+    let indexDot = findIndex(targetDot, tabletDots)
+    const currentDot = owlBtnTblt.querySelector('.active')
+    const targetSlide = slides[indexDot];
+
+    moveToSlide(wrapper, currentSlide, targetSlide)
+    toggleActive(currentDot, targetDot)
+    hideButton(targetSlide, slides)
 });
 
 nextSlide.addEventListener('click', () =>{
-    
-    if (curSlide === maxSlide){
-        curSlide = 0;
-    } else {
-        curSlide++;
-    }
-   
-    slides.forEach((slide,indx) =>{
-        slide.style.transform = `translateX(${20 * (indx - curSlide)}%)`;
-    });
+    const currentSlide = wrapper.querySelector('.active');
+    const nextSlides = currentSlide.nextElementSibling;
 
+    moveToSlide(wrapper, currentSlide, nextSlides)
+    hideButton(nextSlides, slides);
+
+    let slideIndex =  findIndex(nextSlides, slides);
+    const currentDot = owlBtnTblt.querySelector('.active');
+    const targetDot = tabletDots[slideIndex];
+    toggleActive(currentDot, targetDot)
 });
 
 prevSlide.addEventListener('click', () => {
-    if (curSlide === 0){
-        curSlide = maxSlide;
-    } else {
-        curSlide--;
-    }
+    const currentSlide = wrapper.querySelector('.active');
+    const prevSlides = currentSlide.previousElementSibling;
 
-    slides.forEach((slide,indx) =>{
-        slide.style.transform = `translateX(${20 * (indx - curSlide)}%)`;
-    });
+    moveToSlide(wrapper, currentSlide, prevSlides);
+    hideButton(prevSlides, slides);
+
+    let slideIndex =  findIndex(prevSlides, slides);
+    const currentDot = owlBtnTblt.querySelector('.active');
+    const targetDot = tabletDots[slideIndex];
+    toggleActive(currentDot, targetDot)
 });
+
 
 
 // < ========================================================== >

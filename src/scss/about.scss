@@ -185,6 +185,10 @@
                 height: 24px;
                 border: none; 
                 background-color: inherit;
+                &.hidden{
+                    opacity: 0;
+                    visibility: hidden;
+                }
             }
             &-cont{
                 display: flex;
@@ -209,6 +213,10 @@
                 height: 24px;
                 border: none; 
                 background-color: inherit;
+                &.hidden{
+                    opacity: 0;
+                    visibility: hidden;
+                }
             }
             
         }
