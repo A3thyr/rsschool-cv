@@ -5,7 +5,7 @@
 html, body{ 
     scroll-behavior: smooth;
     color: #ffffff;
-
+    width: 1440px;
 }
 header{
     height: 90px;
@@ -24,18 +24,16 @@ header{
     position: absolute;
     top: 0;
     z-index: -1;
-    width: 100%;
     & img{
-        width: 100%;
+        width: 1440px;
         height: 700px;
     }
 }
 .back_img2 {
     position: absolute;
     z-index: -1;
-    width: 100%;
     & img{
         margin-bottom: -96px;
-        width: 100%;
+        width: 1440px;
     }
 }
