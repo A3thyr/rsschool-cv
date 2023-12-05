@@ -21,16 +21,22 @@
                             <span class="header-nav-cont1-row-logo-span">Travel Portal</span>
                         </div>
                         <div class="header-nav-cont1-row-navigation">
+                            <button class="header-nav-cont1-row-navigation-clsbtn">
+                                <img src="./img/clarity_window-close-line.svg" alt="x">
+                            </button>
                             <ul class="header-nav-cont1-row-navigation-ul">
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#"></a>How it works</li>
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#"></a>Plan your trip</li>
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#"></a>Destinations</li>
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#"></a>Travel Stories</li>
+                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#preview"></a>How it works</li>
+                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#steps"></a>Plan your trip</li>
+                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#destinations"></a>Destinations</li>
+                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#stories"></a>Travel Stories</li>
+                                <li class="header-nav-cont1-row-navigation-ul-burger"><a href="" id="login"></a>Account</li>
+                                <li class="header-nav-cont1-row-navigation-ul-burger"><a href="#footer"></a>Social Media</li>
                             </ul>
                         </div>
                         <button class="header-nav-cont1-row-btn">
                             Login
                         </button>
+                        <button class="header-nav-cont1-row-burger"><img src="./img/eva_menu-outline.svg"></button>
                     </div>
                 </div>
             </nav>
@@ -38,7 +44,10 @@
         <div class="backimg1">
             <img src="/src/img/garrett-parker-DlkF4-dbCOU-unsplash1.jpg" alt="afsa"/>
         </div> 
-        <section class="preview"> 
+        <div class="backimgmob1">
+            <img src="./img/garrett-parker-DlkF4-dbCOU-unsplash 2.jpg">
+        </div>
+        <section class="preview" id="preview"> 
             <h1 class="preview-h1">Explore the beauty of the World</h1>
             <span class="preview-span">Receive personalized recommendations for countries, hotels, activities and more</span>
             <form class="preview-search">
@@ -46,24 +55,27 @@
                 <button class="preview-search-btn">Start Planning</button>
             </form>
         </section>
-        <section class="steps"> 
-            <h2 class="section_title">3 STEPS TO THE PERFECT TRIP</h2>
-            <div class="threesteps">
-                <div class="firststep">
-                    <img src="./img/Frame 28.svg" alt="byc">
-                        <span class="text_step">Tell us what you want to do</span>
+        <section class="steps" id="steps"> 
+            <h2 class="steps-title">3 STEPS TO THE PERFECT TRIP</h2>
+            <div class="steps-row">
+                <div class="steps-row-card">
+                    <img src="./img/Frame 28.svg" alt="byc" class="steps-row-card-img">
+                    <img src="./img/Frame 13.svg" alt="plane" class="steps-row-card-imgmob">
+                    <span class="steps-row-card-span">Tell us what you want to do</span>
                 </div>
-                <div class="secondstep">
-                    <img src="./img/Frame 11.svg" alt="calendar">
-                        <span class="text_step">Share us preferable dates</span>
+                <div class="steps-row-card">
+                    <img src="./img/Frame 11.svg" alt="calendar" class="steps-row-card-img">
+                    <img src="./img/Frame 14.svg" alt="plane" class="steps-row-card-imgmob">
+                    <span class="steps-row-card-span">Share us preferable dates</span>
                 </div>
-                <div class="thirdstep">
-                    <img src="./img/Frame 12.svg" alt="plane">
-                        <span class="text_step">We will give you recommendations</span>
+                <div class="steps-row-card">
+                    <img src="./img/Frame 12.svg" alt="plane" class="steps-row-card-img">
+                    <img src="./img/Frame 15.svg" alt="plane" class="steps-row-card-imgmob">
+                    <span class="steps-row-card-span">We will give you recommendations</span>
                 </div>
             </div>
         </section>
-        <section class="destinations"> 
+        <section class="destinations" id="destinations"> 
             <h2 class="destinations-title">POPULAR DESTINATIONS</h2>
             <div class="destinations-photos">
                 <div class="destinations-photos-img">
@@ -88,7 +100,7 @@
                 <img src="./img/bi_arrow-right.svg" alt="arrow"/>Find More
             </button>
         </section>
-        <section class="stories"> 
+        <section class="stories" id="stories"> 
             <h2 class="stories-title">TRAVEL STORIES</h2>
             <div class="stories-cont">
                 <div class="stories-cont-card"> 

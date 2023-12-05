@@ -29,4 +29,24 @@
     }
 }
 
-
+@media screen and (max-width:391px) {
+    .footer {
+        display: flex;
+        flex-direction:row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;  
+        &-spam {
+            display: none;
+        }
+        &-ul {
+            display: flex;
+            flex-direction: row; 
+            gap: 20px;
+            &-li {
+                list-style-type: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

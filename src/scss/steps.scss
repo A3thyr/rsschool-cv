@@ -1,43 +1,91 @@
-.steps{
+.steps {
     margin-top: 301px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    .steps-title {
+        color: #F2785C;
+        font-family: 'Red Hat Text';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .steps-row {
+        display: flex;
+        flex-direction: row;
+        .steps-row-card {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            .steps-row-card-img {
+                display: block;
+            }
+            .steps-row-card-imgmob {
+                display: none;
+            }
+            &-span{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+        }
+    }
+}
 
-}
-.text_step{
-    color: #0D606F;
-    font-family: Aleo;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-.threesteps{
-    height: 154px;
-}
-.firststep{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.secondstep{
-    margin-left: 231px;
-    margin-right: 160px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.thirdstep{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+
+
+
+
+
+@media screen and (max-width:391px) {
+    .steps {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        .steps-title {
+            color: #F2785C;
+            font-family: 'Red Hat Text';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .steps-row {
+            display: flex;
+            flex-direction: row;
+            .steps-row-card {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                .steps-row-card-img {
+                    display: none;
+                }
+                .steps-row-card-imgmob {
+                    display: block;
+                }
+                &-span{
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+            }
+        }
+    }
 }

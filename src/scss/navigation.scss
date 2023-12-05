@@ -26,7 +26,18 @@
                     }
                 }
                 &-navigation {
-
+                    &-clsbtn {
+                        display: none;
+                        position: absolute;
+                        z-index: 3;
+                        width: 30px;
+                        height: 30px;
+                        border: none;
+                        background-color: inherit;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
                     &-ul {
                         display: inline-flex;
                         align-items: flex-start;
@@ -39,6 +50,9 @@
                             &:hover{   
                                 cursor: pointer;
                             }
+                        }
+                        &-burger {
+                            display: none;
                         }
                     }
                 }
@@ -59,13 +73,107 @@
                     &:hover{
                         cursor: pointer;
                     }
-                }                
+                }   
+                &-burger {
+                    display: none;
+                }             
             }
         }
     }
 }
 
-
+@media screen and (max-width: 391px){
+    .header {
+        height: 90px;
+        background-color: #ffffff00;
+        box-shadow: 0px 4px 4px 0px #ffffff00;
+        &-nav {
+            &-cont1 {
+                &-row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 4px;
+                    &-logo {
+                        display: flex;
+                        flex-direction: row;
+                        &-span {
+                            display: none;
+                        }
+                    }
+                    &-navigation {
+                        opacity: 0;
+                        &-clsbtn {
+                            display: block;
+                            position: absolute;
+                            z-index: 3;
+                            width: 30px;
+                            height: 30px;
+                            border: none;
+                            background-color: inherit;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        &-ul {
+                            display: inline-flex;
+                            padding: 44px 15px 30px 44px;
+                            position: fixed;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            list-style-type: none;
+                            border-radius: 10px;
+                            background: #F2785C;
+                            box-shadow: 0px 4px 3px 0px rgba(13, 96, 111, 0.25);
+                            gap: 10px;
+                            &-li {
+                                font-family: "Red Hat Text"; 
+                                font-weight: 500;  
+                                font-size: 16px; 
+                                &:hover{   
+                                    cursor: pointer;
+                                }
+                            }
+                            &-burger {
+                                font-family: "Red Hat Text"; 
+                                font-weight: 500;  
+                                font-size: 16px; 
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                    &-btn {
+                        display: none;
+                        width: 103px;
+                        padding: 10px 30px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 10px;
+                        background: #0D606F;
+                        color: #fff;
+                        font-family: "Red Hat Text", sans-serif;
+                        font-weight: 500;
+                        border: inherit;
+                        box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }   
+                    &-burger {
+                        display: block;
+                        background-color: #ffffff00;
+                        border: none;
+                    }             
+                }
+            }
+        }
+    }
+    
+}
 
 
 
