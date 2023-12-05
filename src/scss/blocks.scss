@@ -5,12 +5,7 @@
 html, body{ 
     scroll-behavior: smooth;
     color: #ffffff;
-    width: 1440px;
-}
-header{
-    height: 90px;
-    background-color: #F2785CB2;
-    box-shadow: 0px 4px 4px 0px #0d606f80;
+
 }
 .section_title{
     color: #F2785C;
@@ -24,16 +19,20 @@ header{
     position: absolute;
     top: 0;
     z-index: -1;
+    width: 100%;
     & img{
-        width: 1440px;
+        width: 100%;
         height: 700px;
     }
 }
 .back_img2 {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
+    width: 100%;
+    margin-top: 195px;
+    display: flex;
     & img{
-        margin-bottom: -96px;
-        width: 1440px;
+        height: 1331px;
+        width: 100%;
     }
 }

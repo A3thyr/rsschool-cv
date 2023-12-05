@@ -1,23 +1,32 @@
-.page_footer {
+.footer {
     display: flex;
     flex-direction:row;
     text-align: center;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 19px;
-    margin-left: 560px;
+    align-items: center;  
+    margin-left: 585px;
     margin-right: 123px;
+    margin-top: 30px;
+    gap: 328px;
+    &-spam {
+        color: #FFF;
+        font-family: 'Red Hat Text';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        
+    }
+    &-ul {
+        display: flex;
+        flex-direction: row;
+        
+        gap: 20px;
+        &-li {
+            list-style-type: none;
+            cursor: pointer;
+        }
+    }
 }
-.footer_sign {
-    
-    color: #FFF;
-    font-family: 'Red Hat Text';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.footer_social_icon {
-    margin-left: 328px;
-    gap: 20px;
-}
+
+

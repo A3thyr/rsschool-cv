@@ -1,48 +1,74 @@
-.cont1{
-    padding: 25px 120px;
-}
-.nav_row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}   
-.logo{
-    color: #fff;
+.header {
+    height: 90px;
+    background-color: #F2785CB2;
+    box-shadow: 0px 4px 4px 0px #0d606f80;
+    &-nav {
 
-    display: flex;
-    align-items: center;
-    font-family: "Magra";
-    font-weight: 600;
-    font-size: 32px;
-    gap: 6px;
-}
-.navigation{
+        &-cont1 {
+            padding: 25px 120px;
+            &-row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                &-logo {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 6px;
+                    &-span {
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        font-family: "Magra";
+                        font-weight: 600;
+                        font-size: 32px;
+                        gap: 6px;
+                    }
+                }
+                &-navigation {
 
-    ul{
-        display: inline-flex;
-        align-items: flex-start;
-        list-style:none;
-        gap: 42px;
-    }
-    li{
-        
-        font-family: "Red Hat Text"; 
-        font-weight: 500;  
-        font-size: 16px;  
+                    &-ul {
+                        display: inline-flex;
+                        align-items: flex-start;
+                        list-style:none;
+                        gap: 42px;
+                        &-li {
+                            font-family: "Red Hat Text"; 
+                            font-weight: 500;  
+                            font-size: 16px; 
+                            &:hover{   
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                &-btn {
+                    display: flex;
+                    width: 103px;
+                    padding: 10px 30px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 10px;
+                    background: #0D606F;
+                    color: #fff;
+                    font-family: "Red Hat Text", sans-serif;
+                    font-weight: 500;
+                    border: inherit;
+                    box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }                
+            }
+        }
     }
 }
-.log-in{
-    display: flex;
-    width: 103px;
-    padding: 10px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: #0D606F;
-    color: #fff;
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 500;
-    border: inherit;
-    box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+
+
+
+
+
+
+
+
