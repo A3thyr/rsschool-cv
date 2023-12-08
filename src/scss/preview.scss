@@ -79,7 +79,7 @@
         width: 360px;
         height: 48px;
         flex-shrink: 0;
-        margin-left: 0px;
+        margin-left: 6px;
         margin-top: 0px;
         &-h1 {
             display: none;
@@ -91,6 +91,8 @@
             margin-top: 46px;
             display: flex;
             flex-direction: row;
+            width: 360px;
+                height: 48px; 
             &-input {
                 color: #F2785C;
                 font-family: Aleo;
@@ -113,12 +115,15 @@
             }
             &-btn {
                 padding: 10px 32px;
+                margin-top: 9px;
                 width: 92px;
                 height: 30px;
                 color: #FFF;
                 font-family: 'Red Hat Text';
                 font-size: 11px;
                 font-style: normal;
+                white-space: nowrap;
+                text-align: center;
                 font-weight: 500;
                 line-height: normal;
                 border-radius: 10px;
@@ -126,8 +131,9 @@
                 background: #0D606F;
                 box-shadow: 0px 2px 3px 0px rgba(13, 96, 111, 0.16), 0px 0px 3px 0px rgba(13, 96, 111, 0.08);
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 position: relative;
-                margin-top: 18px;
                 margin-left: -100px; 
                 &:hover{
                     cursor: pointer;

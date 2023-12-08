@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    .steps-title {
+    &-title {
         color: #F2785C;
         font-family: 'Red Hat Text';
         font-size: 40px;
@@ -13,25 +13,121 @@
         font-weight: 500;
         line-height: normal;
     }
-    .steps-row {
+    &-row {
         display: flex;
         flex-direction: row;
-        .steps-row-card {
+        &-card1{
             display: inline-flex;
             flex-direction: column;
-            justify-content: center;
+
             align-items: center;
             gap: 30px;
-            .steps-row-card-img {
+            &-img {
                 display: block;
             }
-            .steps-row-card-imgmob {
+            &-imgmob {
                 display: none;
             }
-            &-span{
+            &-span1{
                 color: #0D606F;
                 font-family: Aleo;
                 font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+            &-span2{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;  
+                text-align: center;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+            &-span3{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+        }
+        &-card2{
+            display: inline-flex;
+            flex-direction: column;
+
+            align-items: center;
+            gap: 30px;
+            &-img {
+                display: block;
+            }
+            &-imgmob {
+                display: none;
+            }
+            &-span1{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+            &-span2{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;  
+                text-align: center;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+            &-span3{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+        }
+        &-card3{
+            display: inline-flex;
+            flex-direction: column;
+
+            align-items: center;
+            gap: 30px;
+            &-img {
+                display: block;
+            }
+            &-imgmob {
+                display: none;
+            }
+            &-span1{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+            &-span2{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;  
+                text-align: center;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; 
+            }
+            &-span3{
+                color: #0D606F;
+                font-family: Aleo;
+                font-size: 20px;
+                text-align: center;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal; 
@@ -47,13 +143,13 @@
 
 @media screen and (max-width:391px) {
     .steps {
-        margin-top: 100px;
+        margin-top: 130px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 40px;
-        .steps-title {
+        &-title {
             color: #F2785C;
             font-family: 'Red Hat Text';
             font-size: 14px;
@@ -61,26 +157,142 @@
             font-weight: 500;
             line-height: normal;
         }
-        .steps-row {
+        &-row {
             display: flex;
             flex-direction: row;
-            .steps-row-card {
+            &-card1{
                 display: inline-flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                align-items: flex-start;
+                width: 120px;
                 gap: 30px;
-                .steps-row-card-img {
+                &-img {
                     display: none;
                 }
-                .steps-row-card-imgmob {
-                    display: block;
+                &-imgmob {
+                    display: flex;
                 }
-                &-span{
+                &-span1{
+                    width: 94px;
+                    height: 22px;
+                    flex-shrink: 0;
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: start;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+                &-span2{
                     color: #0D606F;
                     font-family: Aleo;
                     font-size: 10px;
                     text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+                &-span3{
+                    width: 98px;
+                    height: 24px;
+                    flex-shrink: 0;
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: end;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+            }
+            &-card2{
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                width: 120px;
+                gap: 30px;
+                &-img {
+                    display: none;
+                }
+                &-imgmob {
+                    display: flex;
+                }
+                &-span1{
+                    width: 94px;
+                    height: 22px;
+                    flex-shrink: 0;
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: start;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+                &-span2{
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+                &-span3{
+                    width: 98px;
+                    height: 24px;
+                    flex-shrink: 0;
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: end;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+            }
+            &-card3{
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 120px;
+                gap: 30px;
+                &-img {
+                    display: none;
+                }
+                &-imgmob {
+                    display: flex;
+                }
+                &-span1{
+                    width: 94px;
+                    height: 22px;
+                    flex-shrink: 0;
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: start;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+                &-span2{
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal; 
+                }
+                &-span3{
+                    width: 98px;
+                    height: 24px;
+                    flex-shrink: 0;
+                    color: #0D606F;
+                    font-family: Aleo;
+                    font-size: 10px;
+                    text-align: end;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal; 

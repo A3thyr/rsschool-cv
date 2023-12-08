@@ -15,12 +15,11 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        
+        display: block;
     }
     &-ul {
         display: flex;
         flex-direction: row;
-        
         gap: 20px;
         &-li {
             list-style-type: none;
@@ -36,12 +35,17 @@
         text-align: center;
         justify-content: center;
         align-items: center;  
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        gap: 0px;
         &-spam {
             display: none;
         }
         &-ul {
             display: flex;
             flex-direction: row; 
+            margin-top: -6px;
             gap: 20px;
             &-li {
                 list-style-type: none;

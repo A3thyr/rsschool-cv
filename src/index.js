@@ -1,2 +1,5 @@
 import './styles.scss'
-
+import './js/carousel'
+import './js/burgermenu'
+import './js/overlay'
+import './js/popup'

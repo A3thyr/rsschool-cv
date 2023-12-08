@@ -25,12 +25,12 @@
                                 <img src="./img/clarity_window-close-line.svg" alt="x">
                             </button>
                             <ul class="header-nav-cont1-row-navigation-ul">
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#preview"></a>How it works</li>
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#steps"></a>Plan your trip</li>
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#destinations"></a>Destinations</li>
-                                <li class="header-nav-cont1-row-navigation-ul-li"><a href="#stories"></a>Travel Stories</li>
-                                <li class="header-nav-cont1-row-navigation-ul-burger"><a href="" id="login"></a>Account</li>
-                                <li class="header-nav-cont1-row-navigation-ul-burger"><a href="#footer"></a>Social Media</li>
+                                <li class="header-nav-cont1-row-navigation-ul-li" id="li"><a href="#preview">How it works</a></li>
+                                <li class="header-nav-cont1-row-navigation-ul-li" id="li"><a href="#steps">Plan your trip</a></li>
+                                <li class="header-nav-cont1-row-navigation-ul-li" id="li"><a href="#destinations">Destinations</a></li>
+                                <li class="header-nav-cont1-row-navigation-ul-li" id="li"><a href="#stories">Travel Stories</a></li>
+                                <li class="header-nav-cont1-row-navigation-ul-burger"><a href="#" id="login">Account</a></li>
+                                <li class="header-nav-cont1-row-navigation-ul-burger" id="li"><a href="#footer">Social Media</a></li>
                             </ul>
                         </div>
                         <button class="header-nav-cont1-row-btn">
@@ -41,12 +41,14 @@
                 </div>
             </nav>
         </header>
+        <div class="overlay"></div>
         <div class="backimg1">
             <img src="/src/img/garrett-parker-DlkF4-dbCOU-unsplash1.jpg" alt="afsa"/>
         </div> 
         <div class="backimgmob1">
             <img src="./img/garrett-parker-DlkF4-dbCOU-unsplash 2.jpg">
         </div>
+      
         <section class="preview" id="preview"> 
             <h1 class="preview-h1">Explore the beauty of the World</h1>
             <span class="preview-span">Receive personalized recommendations for countries, hotels, activities and more</span>
@@ -58,43 +60,65 @@
         <section class="steps" id="steps"> 
             <h2 class="steps-title">3 STEPS TO THE PERFECT TRIP</h2>
             <div class="steps-row">
-                <div class="steps-row-card">
-                    <img src="./img/Frame 28.svg" alt="byc" class="steps-row-card-img">
-                    <img src="./img/Frame 13.svg" alt="plane" class="steps-row-card-imgmob">
-                    <span class="steps-row-card-span">Tell us what you want to do</span>
+                <div class="steps-row-card1">
+                    <img src="./img/Frame 28.svg" alt="byc" class="steps-row-card1-img">
+                    <img src="./img/Frame 13.svg" alt="plane" class="steps-row-card1-imgmob">
+                    <span class="steps-row-card1-span1">Tell us what you want to do</span>
                 </div>
-                <div class="steps-row-card">
-                    <img src="./img/Frame 11.svg" alt="calendar" class="steps-row-card-img">
-                    <img src="./img/Frame 14.svg" alt="plane" class="steps-row-card-imgmob">
-                    <span class="steps-row-card-span">Share us preferable dates</span>
+                <div class="steps-row-card2">
+                    <img src="./img/Frame 11.svg" alt="calendar" class="steps-row-card2-img">
+                    <img src="./img/Frame 14.svg" alt="plane" class="steps-row-card2-imgmob">
+                    <span class="steps-row-card2-span2">Share us preferable dates</span>
                 </div>
-                <div class="steps-row-card">
-                    <img src="./img/Frame 12.svg" alt="plane" class="steps-row-card-img">
-                    <img src="./img/Frame 15.svg" alt="plane" class="steps-row-card-imgmob">
-                    <span class="steps-row-card-span">We will give you recommendations</span>
+                <div class="steps-row-card3">
+                    <img src="./img/Frame 12.svg" alt="plane" class="steps-row-card3-img">
+                    <img src="./img/Frame 15.svg" alt="plane" class="steps-row-card3-imgmob">
+                    <span class="steps-row-card3-span3">We will give you recommendations</span>
                 </div>
             </div>
         </section>
         <section class="destinations" id="destinations"> 
             <h2 class="destinations-title">POPULAR DESTINATIONS</h2>
             <div class="destinations-photos">
-                <div class="destinations-photos-img">
-                    <img src="./img/Rectangle 23.jpg" alt="Spain" class="destinations-photos-img-pic"/>
-                    <span class="destinations-photos-img-span">SPAIN</span>
+                <div class="destinations-photos-wrapper">
+                    <div class="destinations-photos-wrapper-img active">
+                        <img src="./img/Rectangle 23.jpg" alt="Spain" class="destinations-photos-wrapper-img-pic"/>
+                        <img src="./img/Rectangle 26.jpg" alt="spain" class="destinations-photos-wrapper-img-picmob">
+                        <span class="destinations-photos-wrapper-img-span">SPAIN</span>
+                    </div>
+                    <div class="destinations-photos-wrapper-img">
+                        <img src="./img/Rectangle 24.jpg" alt="Japan" class="destinations-photos-wrapper-img-pic"/>
+                        <img src="./img/Rectangle 34.jpg" alt="japan" class="destinations-photos-wrapper-img-picmob">
+                        <span class="destinations-photos-wrapper-img-span">JAPAN</span>
+                    </div>
+                    <div class="destinations-photos-wrapper-img">
+                        <img src="./img/Rectangle 25.jpg" alt="USA" class="destinations-photos-wrapper-img-pic"/>
+                        <img src="./img/Rectangle 35.jpg" alt="usa" class="destinations-photos-wrapper-img-picmob">
+                        <span class="destinations-photos-wrapper-img-span">USA</span>
+                    </div>
                 </div>
-                <div class="destinations-photos-img">
-                    <img src="./img/Rectangle 24.jpg" alt="Japan" class="destinations-photos-img-pic"/>
-                    <span class="destinations-photos-img-span">JAPAN</span>
+                <div class="destinations-photos-butns">
+                    <button class="destinations-photos-butns-leftbtn hidden">
+                        <img src="./img/ep_arrow-up-bold.svg" alt="arrowleft">
+                    </button>
+                    <button class="destinations-photos-butns-rightbtn">
+                        <img src="./img/ep_arrow-up-bold.svg" alt="arrowleft">
+                    </button>
                 </div>
-                <div class="destinations-photos-img">
-                    <img src="./img/Rectangle 25.jpg" alt="USA" class="destinations-photos-img-pic"/>
-                    <span class="destinations-photos-img-span">USA</span>
+                <div class="destinations-photos-dotsmob">
+                    <ul class="destinations-photos-dotsmob-ul">
+                        <li class="destinations-photos-dotsmob-ul-li active"></li>
+                        <li class="destinations-photos-dotsmob-ul-li"></li>
+                        <li class="destinations-photos-dotsmob-ul-li"></li>
+                    </ul>
                 </div>
             </div>
             <div class="destinations-dots">
-                <img src="./img/Ellipse 1.svg" alt="el1"/>
-                <img src="./img/Ellipse 2.svg" alt="el2"/>
-                <img src="./img/Ellipse 3.svg" alt="el3"/>
+                <ul class="destinations-dots-ul">
+                    <li class="destinations-dots-ul-li" id="first"></li>
+                    <li class="destinations-dots-ul-li active" id="second"></li>
+                    <li class="destinations-dots-ul-li" id="third"></li>
+                </ul>
             </div>
             <button class="destinations-btn">
                 <img src="./img/bi_arrow-right.svg" alt="arrow"/>Find More
@@ -105,40 +129,48 @@
             <div class="stories-cont">
                 <div class="stories-cont-card"> 
                     <img src="./img/Rectangle 29.jpg" alt="29" class="stories-cont-card-img"/>
+                    <img src="./img/Rectangle 15.jpg" alt="" class="stories-cont-card-imgmob">
                     <div class="stories-cont-card-text">
                         <span class="stories-cont-card-text-title">10 Photos of Attractive Thailand</span>
                         <div class="stories-cont-card-text-lorem">
                             <p class="stories-cont-card-text-lorem-span">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <p class="stories-cont-card-text-lorem-spanmob">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                             <a href="#" class="stories-cont-card-text-lorem-readmore">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="stories-cont-card">
                     <img src="./img/Rectangle 30.jpg" alt="30" class="stories-cont-card-img"/>
+                    <img src="./img/Rectangle 16.jpg" alt="" class="stories-cont-card-imgmob">
                     <div class="stories-cont-card-text">
                         <span class="stories-cont-card-text-title">Canyonlands National Park, Utah</span>
                         <div class="stories-cont-card-text-lorem">
                             <p class="stories-cont-card-text-lorem-span">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <p class="stories-cont-card-text-lorem-spanmob">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                             <a href="#" class="stories-cont-card-text-lorem-readmore">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="stories-cont-card">
                     <img src="./img/Rectangle 31 (1).jpg" alt="31" class="stories-cont-card-img"/>
+                    <img src="./img/Rectangle 27.jpg" alt="" class="stories-cont-card-imgmob">
                     <div class="stories-cont-card-text">
                         <span class="stories-cont-card-text-title">I left my heart in the Mountains!</span>
                         <div class="stories-cont-card-text-lorem">
                             <p class="stories-cont-card-text-lorem-span">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <p class="stories-cont-card-text-lorem-spanmob">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                             <a href="#" class="stories-cont-card-text-lorem-readmore">Read More</a>
                         </div>
                     </div>
                 </div>
                 <div class="stories-cont-card">
                     <img src="./img/Rectangle 32.jpg" alt="32" class="stories-cont-card-img"/>
+                    <img src="./img/Rectangle 17.jpg" alt="" class="stories-cont-card-imgmob">
                     <div class="stories-cont-card-text">
                         <span class="stories-cont-card-text-title">The Longest journey in my life!</span>
                         <div class="stories-cont-card-text-lorem">
                             <p class="stories-cont-card-text-lorem-span">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <p class="stories-cont-card-text-lorem-spanmob">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...</p>
                             <a href="#" class="stories-cont-card-text-lorem-readmore">Read More</a>
                         </div>
                     </div>
@@ -151,13 +183,16 @@
             <div class="back_img2">
                 <img src="./img/Rectangle 33.jpg" alt="bckimg2">
             </div>
+            <div class="backimgmob2">
+                <img src="./img/Rectangle 28.jpg" alt="bckimg2mob">
+            </div>
         </section>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <span class="footer-spam">All Rights Reserved © Travel Portal</span>
             <ul class="footer-ul">
-                <li class="footer-ul-li"><img src="./img/akar-icons_instagram-fill.svg"/></a>
-                <li class="footer-ul-li"><img src="./img/akar-icons_video.svg"/></a>
-                <li class="footer-ul-li"><img src="./img/akar-icons_twitter-fill.svg"/></a>
+                <li class="footer-ul-li"><img src="./img/akar-icons_instagram-fill.svg"/></li>
+                <li class="footer-ul-li"><img src="./img/akar-icons_video.svg"/></li>
+                <li class="footer-ul-li"><img src="./img/akar-icons_twitter-fill.svg"/></li>
             </ul>
         </footer>
     </body>
