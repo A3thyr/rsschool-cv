@@ -20,6 +20,9 @@
         margin-top: 46px;
         gap: 60px;
         &-wrapper {
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 60px;
             &-img {
                 display: flex;
                 flex-direction: column-reverse;

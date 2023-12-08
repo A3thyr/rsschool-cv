@@ -16,6 +16,9 @@
     &-row {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 1177px;
         &-card1{
             display: inline-flex;
             flex-direction: column;
